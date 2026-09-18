@@ -1,0 +1,546 @@
+{
+  "$schema": "self-describing snapshot of the whole project; keep in sync with the .md files",
+  "meta": {
+    "brainVersion": "1.0",
+    "lastUpdated": "2026-09-11 12:10",
+    "updatedBy": "Claude Opus 5 (Claude Code desktop session)",
+    "readFirst": "HANDOFF.md"
+  },
+  "project": {
+    "name": "ota-name-generator",
+    "objective": "Given one StayVista property URL, read the property page, rank what actually sells it, and recommend the OTA title to publish on Airbnb, Booking.com, MakeMyTrip, Agoda and Goibibo.",
+    "status": "shipped",
+    "phase": "v1.4 — a title per OTA",
+    "started": "2026-09-10",
+    "percentComplete": 100
+  },
+  "architecture": {
+    "stack": [
+      "Node.js 20+ (ESM)",
+      "node:http (no framework)",
+      "vanilla HTML/CSS/JS dashboard",
+      "optional @anthropic-ai/sdk",
+      "headless Chrome/Edge over CDP (no dependency; uses the installed browser)"
+    ],
+    "entryPoints": [
+      "server.js"
+    ],
+    "keyModules": [
+      {
+        "name": "knowledge",
+        "path": "lib/knowledge.js",
+        "purpose": "USP catalog with title weights, allowed wording, property types, shortenings, OTA title violations — the product's domain opinion"
+      },
+      {
+        "name": "ota",
+        "path": "lib/ota.js",
+        "purpose": "OTA detection from URL, URL normalisation, private-address (SSRF) guard"
+      },
+      {
+        "name": "parsers",
+        "path": "lib/parsers/index.js",
+        "purpose": "page -> raw signals from JSON-LD, embedded app state, meta tags and page text; also the pasted-text path"
+      },
+      {
+        "name": "facts",
+        "path": "lib/facts.js",
+        "purpose": "signals -> verified fact sheet with source + evidence per fact, USP matching, manual overrides, coverage"
+      },
+      {
+        "name": "usp",
+        "path": "lib/usp.js",
+        "purpose": "ranks USPs for this specific property (size, guest fit, property type, emphasis)"
+      },
+      {
+        "name": "names",
+        "path": "lib/names.js",
+        "purpose": "segment-based title templates per naming style, plus the shortening ladder"
+      },
+      {
+        "name": "validate",
+        "path": "lib/validate.js",
+        "purpose": "the accuracy gate (vocabulary from verified facts) and OTA guideline checks"
+      },
+      {
+        "name": "score",
+        "path": "lib/score.js",
+        "purpose": "scores a title out of 100 on the eight brief criteria and explains why"
+      },
+      {
+        "name": "llm",
+        "path": "lib/llm.js",
+        "purpose": "optional Claude pass over the fact sheet; proposals still go through the gate"
+      },
+      {
+        "name": "analyze",
+        "path": "lib/analyze.js",
+        "purpose": "the pipeline and the API response shape"
+      },
+      {
+        "name": "fetcher",
+        "path": "lib/fetcher.js",
+        "purpose": "one polite request; classifies html/json/text/binary and detects bot challenges and login walls"
+      },
+      {
+        "name": "extract",
+        "path": "lib/extract.js",
+        "purpose": "the five-route strategy chain and the merge of what each route found"
+      },
+      {
+        "name": "render",
+        "path": "lib/render.js",
+        "purpose": "headless Chrome/Edge over CDP for client-rendered pages; stops at any gate"
+      },
+      {
+        "name": "json parser",
+        "path": "lib/parsers/json.js",
+        "purpose": "JSON/API payloads mined by key name; placeholder-response detection"
+      },
+      {
+        "name": "adapters",
+        "path": "lib/parsers/adapters.js",
+        "purpose": "per-OTA selectors, JSON key aliases, placeholder shapes and user-facing notes"
+      },
+      {
+        "name": "log",
+        "path": "lib/log.js",
+        "purpose": "structured per-analysis trace, safe by construction"
+      },
+      {
+        "name": "capture",
+        "path": "lib/capture.js",
+        "purpose": "browser-capture channel: token, in-memory store, snippet, trusted section and amenity lines"
+      },
+      {
+        "name": "urlfacts",
+        "path": "lib/urlfacts.js",
+        "purpose": "property name, city, type and BHK read from the listing path, per OTA"
+      },
+      {
+        "name": "stayvista parser",
+        "path": "lib/parsers/stayvista.js",
+        "purpose": "reads a StayVista property page: schema.org Hotel + __NEXT_DATA__ (city, max_occupancy, highlights, amenities) and the unavailable list, which is honoured as a denial"
+      },
+      {
+        "name": "otastyle",
+        "path": "lib/otastyle.js",
+        "purpose": "per-OTA naming profiles (ceiling, city, brand-first, BHK vs spelled-out bedrooms, abbreviations) and the candidate wordings each platform prefers"
+      }
+    ],
+    "patterns": [
+      "Every fact carries {value, source, evidence}; anything not on the fact sheet cannot appear in a name",
+      "LLM proposes, deterministic engine decides — AI names are re-validated and re-scored locally",
+      "Title candidates are prioritised segments, so shortening drops the least important part instead of truncating",
+      "USP `feature` de-duplicates alternative wordings of one thing; USP `category` limits one per title",
+      "Zero runtime dependencies; the Anthropic SDK is lazily imported and optional",
+      "Extraction is a chain of five routes whose results merge; the trace is part of the API response",
+      "Trusted zone (the listing about itself) vs page zone (everything else on the page): only the trusted zone can name a property",
+      "Proximity language invalidates setting/view claims but not amenity claims",
+      "A route that has proved pointless for a URL is not repeated in the session (known placeholders)",
+      "A page the user captured in their own browser is a first-class route, trusted for its property section only",
+      "The URL itself is the floor of the fact sheet, so an unreadable page still yields a partial analysis",
+      "StayVista is the source of truth; its unavailable-amenity list denies a feature outright",
+      "Negation counts only in the run-up to a match, never anywhere in the sentence",
+      "A phrase that upgrades what the page confirms is refused even when every word is allowed",
+      "Per-OTA titles come from platform profiles, and pass the same accuracy gate and scorer as every other name"
+    ]
+  },
+  "progress": {
+    "currentFocus": "none — v1.4 delivered and tested",
+    "worksEndToEnd": [
+      "StayVista property URL -> full read in under a second -> ranked USPs -> five structured options -> recommendation",
+      "One title per OTA (Airbnb / Booking.com / MakeMyTrip / Agoda / Goibibo), each within that platform's ceiling and shown as a card with a glyph, counter and Copy button",
+      "Unavailable amenities honoured: The Infinity Heaven denies 9 features, none of which can enter a name",
+      "Airbnb URL -> direct read; Agoda URL -> browser rendering; MakeMyTrip/Goibibo -> placeholder detected, capture route offered",
+      "Browser capture, URL-facts floor, manual corrections, accuracy gate, optional Claude pass",
+      "npm test: 108 engine + 150 extraction assertions, no network or API key needed"
+    ],
+    "broken": [
+      "MakeMyTrip and Goibibo never serve the listing to anything outside their own site session — by design the tool does not try to look like one; the browser-capture route covers it",
+      "Booking.com serves a bot-protection challenge, which is deliberately not satisfied"
+    ]
+  },
+  "files": [
+    {
+      "path": "server.js",
+      "status": "created",
+      "purpose": "static dashboard + /api/analyze + /api/status, no framework"
+    },
+    {
+      "path": "lib/knowledge.js",
+      "status": "created",
+      "purpose": "USP catalog and naming rules"
+    },
+    {
+      "path": "lib/ota.js",
+      "status": "created",
+      "purpose": "OTA detection and URL safety"
+    },
+    {
+      "path": "lib/fetcher.js",
+      "status": "created",
+      "purpose": "listing fetch with challenge detection"
+    },
+    {
+      "path": "lib/html.js",
+      "status": "created",
+      "purpose": "dependency-free HTML/JSON extraction helpers"
+    },
+    {
+      "path": "lib/parsers/index.js",
+      "status": "created",
+      "purpose": "page and pasted-text parsing into signals"
+    },
+    {
+      "path": "lib/facts.js",
+      "status": "created",
+      "purpose": "verified fact sheet + overrides"
+    },
+    {
+      "path": "lib/usp.js",
+      "status": "created",
+      "purpose": "property-specific USP ranking"
+    },
+    {
+      "path": "lib/names.js",
+      "status": "created",
+      "purpose": "name templates and shortening"
+    },
+    {
+      "path": "lib/validate.js",
+      "status": "created",
+      "purpose": "accuracy gate and guideline checks"
+    },
+    {
+      "path": "lib/score.js",
+      "status": "created",
+      "purpose": "scoring and reasons"
+    },
+    {
+      "path": "lib/llm.js",
+      "status": "created",
+      "purpose": "optional Claude pass"
+    },
+    {
+      "path": "lib/analyze.js",
+      "status": "created",
+      "purpose": "pipeline orchestration"
+    },
+    {
+      "path": "public/index.html",
+      "status": "created",
+      "purpose": "dashboard markup"
+    },
+    {
+      "path": "public/styles.css",
+      "status": "created",
+      "purpose": "StayVista-branded styling"
+    },
+    {
+      "path": "public/app.js",
+      "status": "created",
+      "purpose": "dashboard behaviour, all listing content escaped"
+    },
+    {
+      "path": "test/run-tests.js",
+      "status": "created",
+      "purpose": "108 engine tests"
+    },
+    {
+      "path": "test/fixtures/airbnb-villa.html",
+      "status": "created",
+      "purpose": "synthetic listing used by the tests"
+    },
+    {
+      "path": "README.md",
+      "status": "created",
+      "purpose": "how to run, the rules enforced, per-OTA reality, API"
+    },
+    {
+      "path": ".env.example",
+      "status": "created",
+      "purpose": "optional ANTHROPIC_API_KEY and overrides"
+    },
+    {
+      "path": "lib/extract.js",
+      "status": "created",
+      "purpose": "five-route extraction chain and merge"
+    },
+    {
+      "path": "lib/render.js",
+      "status": "created",
+      "purpose": "headless Chrome/Edge over CDP, gate-aware"
+    },
+    {
+      "path": "lib/log.js",
+      "status": "created",
+      "purpose": "structured extraction trace"
+    },
+    {
+      "path": "lib/parsers/json.js",
+      "status": "created",
+      "purpose": "JSON payload parser + placeholder detection"
+    },
+    {
+      "path": "lib/parsers/adapters.js",
+      "status": "created",
+      "purpose": "per-OTA extraction knowledge"
+    },
+    {
+      "path": "test/extraction-tests.js",
+      "status": "created",
+      "purpose": "59 extraction assertions"
+    },
+    {
+      "path": "lib/capture.js",
+      "status": "created",
+      "purpose": "browser-capture channel and trusted-section logic"
+    },
+    {
+      "path": "lib/urlfacts.js",
+      "status": "created",
+      "purpose": "facts carried by the listing URL"
+    },
+    {
+      "path": "lib/otastyle.js",
+      "status": "created",
+      "purpose": "per-OTA naming profiles and candidates"
+    }
+  ],
+  "tasks": {
+    "todo": [
+      "T-011: Widen the USP catalog as real listings surface features it does not yet know",
+      "T-026: If the capture snippet gets used daily, package it as a small browser extension so it is one click with no bookmarklet setup",
+      "T-012: Optionally persist analyses so a property's previous recommendation can be compared"
+    ],
+    "inProgress": [],
+    "done": [
+      "T-001: Project + brain scaffolding",
+      "T-002: USP knowledge base with title weights and wording rules",
+      "T-003: Fetcher with challenge/login detection and SSRF guard",
+      "T-004: Multi-source parser (JSON-LD, embedded state, meta, page text) with per-fact evidence",
+      "T-005: USP ranking that adapts to size, guest fit and property type",
+      "T-006: Name templates for six styles + shortening ladder to any character limit",
+      "T-007: Accuracy gate (vocabulary + gated qualifier words) and OTA guideline checks",
+      "T-008: 100-point scorer with per-criterion breakdown and reasons",
+      "T-009: Dashboard (analysis, USP priority, best name, alternatives, corrections, error/paste states)",
+      "T-013: Optional Claude pass with local re-validation",
+      "T-014: 108 engine tests + real-URL verification across all five OTAs",
+      "T-016: JSON/API responses parsed instead of rejected",
+      "T-017: Five-route extraction chain with merging and a user-visible trace",
+      "T-018: Per-OTA adapters and placeholder-response detection",
+      "T-019: Headless Chrome/Edge rendering over CDP, stopping at gates",
+      "T-020: Trusted/page zones, proximity guard and type-detection ordering",
+      "T-021: One-click confirmation of page-zone features + no-USP fallback names",
+      "T-023: Browser-capture channel (snippet, store, polling, auto-analysis) for session-gated OTAs",
+      "T-024: URL-metadata route so an unreadable page still yields a partial analysis",
+      "T-025: Placeholder URLs remembered so no route repeats pointless work",
+      "T-027: StayVista source parser with the unavailable-amenity denial",
+      "T-028: OTA title format (pipe blocks, comma location, Pvt Pool) and the four brief structures",
+      "T-029: Five structured options with main USP, plus a one-sentence recommendation",
+      "T-030: Phrase-level accuracy check and property-name words unlocking gated forms",
+      "T-031: One title per OTA, with platform profiles and card UI"
+    ]
+  },
+  "decisions": [
+    {
+      "id": "D-001",
+      "date": "2026-09-10",
+      "decision": "Deterministic engine is the product; Claude is an optional enhancement",
+      "rationale": "No API key was set, and the accuracy rules are easier to guarantee in code. The tool works fully offline and the AI pass cannot introduce unverified claims."
+    },
+    {
+      "id": "D-002",
+      "date": "2026-09-10",
+      "decision": "Zero runtime dependencies (node:http, hand-rolled HTML/JSON extraction)",
+      "rationale": "Keeps install trivial on a RAM-constrained laptop and avoids a framework for a single-page internal tool."
+    },
+    {
+      "id": "D-003",
+      "date": "2026-09-10",
+      "decision": "Every fact carries a source and an evidence quote; names may only use fact-sheet vocabulary",
+      "rationale": "The brief's hardest requirement is never inventing information. A vocabulary gate makes that checkable rather than aspirational, and it also polices AI output."
+    },
+    {
+      "id": "D-004",
+      "date": "2026-09-10",
+      "decision": "No attempt to defeat bot protection, CAPTCHAs or login walls; offer a paste path instead",
+      "rationale": "Explicitly required by the brief and the right call for OTA terms of service. Pasting the page the user already has open gives the same analysis quality."
+    },
+    {
+      "id": "D-005",
+      "date": "2026-09-10",
+      "decision": "Split USP identity into `feature` (de-duplicate wordings) and `category` (one per title)",
+      "rationale": "A pool table and indoor games are different facts about a property but should not both sit in one title; 'Pool' and 'Private Pool' are the same fact and only the stronger wording should survive."
+    },
+    {
+      "id": "D-006",
+      "date": "2026-09-10",
+      "decision": "Titles are prioritised segments, shortened by substitution then segment removal",
+      "rationale": "Guarantees the character limit without truncating mid-word and without losing the strongest USP, and lets the UI report exactly what was shortened or dropped."
+    },
+    {
+      "id": "D-007",
+      "date": "2026-09-10",
+      "decision": "A JSON response is a listing to parse, not an error",
+      "rationale": "The reported MakeMyTrip failure was a content-type rejection. Responses are now classified and JSON payloads mined by key name; only binary is rejected. It also exposed that MMT/Goibibo send byte-sized OK placeholders, which is now named explicitly."
+    },
+    {
+      "id": "D-008",
+      "date": "2026-09-10",
+      "decision": "Render with the installed browser over CDP, and stop at gates",
+      "rationale": "Client-rendered OTAs (Agoda, Goibibo) can only be read by executing their own app. Uses installed Chrome/Edge with zero dependencies; reports blocked on any challenge, CAPTCHA or login wall rather than trying to pass it."
+    },
+    {
+      "id": "D-009",
+      "date": "2026-09-10",
+      "decision": "Split every page into a trusted zone and a page zone",
+      "rationale": "Rendering surfaced neighbouring listings, filter labels and area guides as if they were this property's features (a city hotel came out as River View Farm House). Only what the listing says about itself can name it; the rest is reported and confirmable."
+    },
+    {
+      "id": "D-010",
+      "date": "2026-09-10",
+      "decision": "Capture the listing from the browser the user is already using",
+      "rationale": "MakeMyTrip and Goibibo serve a placeholder to anything outside their own site session, rendering included. The page on the user's screen is the only readable copy, and a user-initiated capture of it is within their gift; automating the site navigation that removes the placeholder would not be."
+    },
+    {
+      "id": "D-011",
+      "date": "2026-09-10",
+      "decision": "The URL is a fact source of last resort",
+      "rationale": "The listing path carries the property name and city. Showing an error while holding those facts was wasteful; they now seed a partial analysis, labelled From the URL and outranked by anything read from the page."
+    },
+    {
+      "id": "D-012",
+      "date": "2026-09-11",
+      "decision": "StayVista is the source of truth, and its unavailable-amenity list is a denial",
+      "rationale": "StayVista publishes what a property does not have. Honouring that is stronger than any text heuristic: The Infinity Heaven denies 9 features, and a Pool/Jacuzzi search-category tag on another villa would otherwise have invented a jacuzzi. Text negation is also guarded, but only in the run-up to a match."
+    },
+    {
+      "id": "D-013",
+      "date": "2026-09-11",
+      "decision": "One title per OTA, from platform conventions rather than one universal name",
+      "rationale": "Airbnb shows the location and truncates; Booking.com treats the title as the property name; MMT/Goibibo guests search by BHK and city; Agoda's audience does not read BHK. Conventions, not quoted policy — stated as such in the module, and overridable."
+    }
+  ],
+  "bugs": {
+    "open": [],
+    "fixed": [
+      {
+        "id": "BUG-001",
+        "summary": "Commodity amenities collapsed to one entry because they shared a category",
+        "fixedBy": "Gave each commodity its own category; de-duplication now keys on `feature`"
+      },
+      {
+        "id": "BUG-002",
+        "summary": "'mountain views' (plural) did not match the view USPs",
+        "fixedBy": "Made view patterns plural-tolerant"
+      },
+      {
+        "id": "BUG-003",
+        "summary": "'8BHK' passed validation on a 6-bedroom property that had 8 beds",
+        "fixedBy": "Size tokens are now checked against the count for their own unit"
+      },
+      {
+        "id": "BUG-004",
+        "summary": "Word de-duplication could leave a dangling connector ('Pool &')",
+        "fixedBy": "trimConnectors() after de-duplication"
+      },
+      {
+        "id": "BUG-005",
+        "summary": "A manually added USP was skipped when its category already existed",
+        "fixedBy": "Manual text now adds every catalog entry it matches whose feature is not already present"
+      },
+      {
+        "id": "BUG-006",
+        "summary": "ftp:// URLs were accepted (https:// was prepended to them)",
+        "fixedBy": "Reject any explicit non-http(s) scheme in normalizeUrl"
+      },
+      {
+        "id": "BUG-007",
+        "summary": "Pasted details yielded no property name or location",
+        "fixedBy": "First line treated as a name candidate; location pattern no longer requires punctuation after the place"
+      },
+      {
+        "id": "BUG-010",
+        "summary": "Literal 0x08 bytes instead of \\b word boundaries disabled roomTypeLine and the Tiny Home patterns",
+        "fixedBy": "Replaced the control characters and audited every source file"
+      },
+      {
+        "id": "BUG-011",
+        "summary": "A rendered hotel page produced River View Farm House for a city hotel",
+        "fixedBy": "Trusted/page zones, proximity guard, type detection by source priority and earliest match"
+      },
+      {
+        "id": "BUG-012",
+        "summary": "A function-room capacity became 'Hotel for 30' in a title",
+        "fixedBy": "Guest counts need a structured source to enter a name"
+      },
+      {
+        "id": "BUG-013",
+        "summary": "A listing with nothing confirmed produced no names",
+        "fixedBy": "No-USP fallback templates"
+      },
+      {
+        "id": "BUG-014",
+        "summary": "A neighbour's stronger wording displaced the property's own confirmed feature, losing it entirely",
+        "fixedBy": "Confirmed beats unconfirmed in same-feature de-duplication"
+      },
+      {
+        "id": "BUG-015",
+        "summary": "Prefilled correction fields were resubmitted as manual overrides after a capture",
+        "fixedBy": "dataset.prefill marks extracted values; only user edits are sent"
+      },
+      {
+        "id": "BUG-016",
+        "summary": "A BHK count in a URL slug was never read",
+        "fixedBy": "Read from the resolved name — an underscore is a word character"
+      },
+      {
+        "id": "BUG-017",
+        "summary": "Every brand-led title was rejected for a villa named The Infinity Heaven",
+        "fixedBy": "Property-name words unlock their gated forms; a phrase-level check refuses upgrade wordings"
+      },
+      {
+        "id": "BUG-018",
+        "summary": "An in-house bar was invisible to the ranker",
+        "fixedBy": "Added the bar USP"
+      },
+      {
+        "id": "BUG-019",
+        "summary": "The new bar regex silently never matched",
+        "fixedBy": "Literal 0x08 bytes from a patch script repaired again — run the control-character grep after every scripted edit"
+      }
+    ]
+  },
+  "dependencies": [
+    {
+      "name": "@anthropic-ai/sdk",
+      "version": "^0.70.0",
+      "why": "Optional Claude pass only — declared as an optionalDependency and lazily imported, so the tool runs without it"
+    }
+  ],
+  "assumptions": [
+    "One property per analysis; bulk/Excel flows are explicitly out of scope",
+    "Default title limit 50 characters, adjustable per analysis in the UI",
+    "Indian villa/homestay vocabulary is the priority (BHK, bonfire, caretaker cum cook, jhula, sigri)",
+    "The user may legitimately paste listing content from a page they have open; that counts as a verified source"
+  ],
+  "nextSteps": [
+    "Sanity-check the per-OTA conventions against what your OTA account managers advise, and adjust the profiles in lib/otastyle.js if any platform differs",
+    "Run more StayVista properties and add USP wording the catalog misses (an in-house bar was one such gap)",
+    "Decide the house rule for NCR properties whose name and city field disagree (Faridabad vs New Delhi) — the tool surfaces both and the correction panel switches it"
+  ],
+  "lessonsLearned": [
+    "MakeMyTrip and Goibibo answer listing URLs from outside their own site session with a byte-sized OK placeholder (6 and 8 bytes) under a JSON content type — a rendering browser gets the same, so there is nothing to parse and nothing to retry",
+    "The fallback that works for those OTAs is the user's own browser: a bookmarklet or console snippet posting the page's visible content to the local server, which is user-initiated and bypasses nothing",
+    "A site's CSP can block the snippet's fetch, so the snippet falls back to opening a local receive page with the payload in the URL fragment (navigation is not restricted by connect-src)",
+    "Booking.com answers automated requests with an AWS WAF challenge; Agoda ships an empty shell that rendering can read; Airbnb serves the listing directly",
+    "Headless Chrome needs an explicit --user-agent: with the default HeadlessChrome UA, MakeMyTrip fails the request with ERR_HTTP2_PROTOCOL_ERROR",
+    "Node has a global WebSocket, so CDP needs no dependency; Chrome writes its port to <user-data-dir>/DevToolsActivePort with --remote-debugging-port=0",
+    "Any page read in bulk brings its neighbours: recommendation carousels, filter lists and area guides all look like evidence unless zoned out, and a neighbour's stronger wording can even displace the property's own feature in de-duplication",
+    "Airbnb keeps everything in the data-deferred-state-0 JSON blob while its rendered HTML text is only ~700 characters",
+    "Agoda's ld+json is present but empty and its initParams blob is config only — page-source pastes do not help there; visible page text does",
+    "Writing large JS through bash heredocs mangles regex-heavy content and fails outright on apostrophes; use the Write tool for new files, write patch scripts to a file, and use raw strings for anything containing \\b (a non-raw string once wrote literal 0x08 bytes)",
+    "pkill does not reliably stop node on Windows; stop the server by matching its command line via PowerShell/CIM or the old process keeps the port and you test stale code"
+  ]
+}

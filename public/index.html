@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>OTA Property Name Generator</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brandmark">
+      <div class="windows" aria-hidden="true">
+        <span class="window sky"></span>
+        <span class="window bloom"></span>
+        <span class="window shine"></span>
+      </div>
+      <div>
+        <h1>OTA Property Name Generator</h1>
+        <p class="subtitle">Paste a StayVista property URL. The tool reads the property, ranks what actually
+          sells it, and writes the name to publish on Airbnb, Booking.com, MakeMyTrip, Agoda and Goibibo.</p>
+      </div>
+    </div>
+    <div class="mode-badge" id="modeBadge" title="Loading mode">
+      <span class="dot engine"></span><span id="modeText">Checking mode...</span>
+    </div>
+  </div>
+</header>
+
+<main class="shell">
+
+  <!-- ------------------------------------------------------------- input -->
+  <section class="card search-card">
+    <form id="searchForm" autocomplete="off">
+      <label class="field-label" for="url">StayVista Property URL</label>
+      <div class="search-row">
+        <div class="url-wrap">
+          <input id="url" type="text" placeholder="https://www.stayvista.com/villa/..."
+                 autocomplete="off" spellcheck="false" />
+          <span class="ota-chip" id="otaChip" hidden></span>
+        </div>
+        <button class="btn" id="analyzeBtn" type="submit">Analyze Property</button>
+      </div>
+    </form>
+
+    <div class="search-meta">
+      <span class="inline-field">
+        <label class="field-label" for="maxChars" style="margin:0">Maximum Characters</label>
+        <input id="maxChars" type="number" min="20" max="120" step="1" value="50" />
+      </span>
+      <label class="checkbox" id="aiToggleWrap" hidden>
+        <input type="checkbox" id="useAi" checked />
+        <span>Use the Claude pass</span>
+      </label>
+      <span class="supported-list">StayVista property pages; OTA listing URLs also work</span>
+    </div>
+  </section>
+
+  <!-- ------------------------------------------------------------ states -->
+  <div id="loading" class="loading" hidden>
+    <div class="steps">
+      <span class="active">Reading the listing</span>
+      <span class="active">Extracting verified facts</span>
+      <span class="active">Rendering the page if needed</span>
+      <span class="active">Ranking USPs</span>
+      <span class="active">Writing and scoring names</span>
+    </div>
+    <div class="skeleton tall"></div>
+    <div class="skeleton"></div>
+    <div class="skeleton"></div>
+  </div>
+
+  <div id="errorBox" hidden></div>
+  <div id="captureBox" hidden></div>
+
+  <section class="card empty" id="emptyState">
+    <h3>One property at a time</h3>
+    <p>Paste a StayVista property URL. The tool reads the whole page — highlights, amenities,
+      layout, views, outdoor features, guest capacity — respects the amenities StayVista lists as
+      unavailable, ranks what actually sells the property, and writes five OTA titles built only
+      from what the page confirms.</p>
+  </section>
+
+  <!-- ----------------------------------------------------------- results -->
+  <div id="results" hidden>
+
+    <div id="warnings"></div>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>Property Analysis</h2>
+        <span class="section-note" id="extractionNote"></span>
+      </div>
+      <div class="facts" id="facts"></div>
+    </section>
+
+    <section class="section">
+      <div class="usp-columns">
+        <div class="card panel">
+          <h3>Key Property USPs</h3>
+          <p class="panel-sub">Verified features found on the listing.</p>
+          <ul class="usp-list" id="uspChecks"></ul>
+          <div class="commodity-note" id="commodityNote" hidden></div>
+        </div>
+        <div class="card panel">
+          <h3>USP Priority</h3>
+          <p class="panel-sub">Ranked by how strongly each would sell this property in a title.</p>
+          <ul class="usp-list" id="uspRanked"></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>Recommended OTA Name</h2>
+        <span class="section-note" id="nameCountNote"></span>
+      </div>
+      <div class="card best" id="bestCard"></div>
+    </section>
+
+    <section class="section" id="otaSection">
+      <div class="section-head">
+        <h2>Name for each OTA</h2>
+        <span class="section-note">Written for each platform's audience, naming style and search behaviour.</span>
+      </div>
+      <div class="ota-cards" id="otaCards"></div>
+    </section>
+
+    <section class="section" id="othersSection">
+      <div class="section-head">
+        <h2>OTA Name Options</h2>
+        <span class="section-note">Five structures, each checked against the page and the character limit.</span>
+      </div>
+      <div class="suggestions" id="suggestions"></div>
+      <div id="moreNamesBox"></div>
+      <div id="rejectedBox"></div>
+    </section>
+
+    <!-- -------------------------------------------------------- correct -->
+    <section class="section">
+      <div class="section-head">
+        <h2>Property Information</h2>
+        <span class="section-note">Correct anything the extraction got wrong, then regenerate.</span>
+      </div>
+      <div class="card panel">
+        <div class="correct-grid">
+          <label>
+            <span class="field-label">Property Name</span>
+            <input type="text" id="fixName" autocomplete="off" />
+          </label>
+          <label>
+            <span class="field-label">Location</span>
+            <input type="text" id="fixLocation" autocomplete="off" />
+          </label>
+          <label>
+            <span class="field-label">Property Type</span>
+            <input type="text" id="fixType" autocomplete="off" list="typeList" />
+            <datalist id="typeList">
+              <option>Villa</option><option>Farm House</option><option>Bungalow</option>
+              <option>Cottage</option><option>Apartment</option><option>Homestay</option>
+              <option>Penthouse</option><option>Cabin</option><option>Studio</option>
+            </datalist>
+          </label>
+          <label>
+            <span class="field-label">Bedrooms</span>
+            <input type="number" id="fixBedrooms" min="1" max="40" />
+          </label>
+          <label>
+            <span class="field-label">Guest Capacity</span>
+            <input type="number" id="fixGuests" min="1" max="100" />
+          </label>
+          <label>
+            <span class="field-label">Bathrooms</span>
+            <input type="number" id="fixBathrooms" min="1" max="40" step="0.5" />
+          </label>
+        </div>
+
+        <div style="margin-top:18px">
+          <label>
+            <span class="field-label">Additional USP</span>
+            <input type="text" id="fixAddUsp" placeholder="e.g. Panoramic mountain view — comma-separated for several" autocomplete="off" />
+          </label>
+          <p class="hint">Only add features the property genuinely has. Anything you add is treated as verified.</p>
+        </div>
+
+        <div style="margin-top:16px">
+          <span class="field-label">Remove USP</span>
+          <div class="chips" id="removeChips"></div>
+          <p class="hint">Click a feature to exclude it from the names.</p>
+        </div>
+
+        <div class="correct-actions">
+          <button class="btn" id="regenerateBtn">Regenerate Names</button>
+          <button class="btn secondary" id="resetFixBtn">Reset corrections</button>
+          <span class="inline-field">
+            <span class="field-label" style="margin:0">Max characters</span>
+            <input type="number" id="fixMaxChars" min="20" max="120" value="50" />
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <div class="foot" id="foot"></div>
+  </div>
+
+</main>
+
+<script src="/app.js"></script>
+</body>
+</html>
