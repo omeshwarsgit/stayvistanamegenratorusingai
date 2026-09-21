@@ -427,6 +427,11 @@ for (const profile of OTA_PROFILES) {
     !/bonfire|bbq|home theatre|beachfront|infinity/i.test(chosen), chosen);
 }
 
+check('Airbnb excludes StayVista brand', !/stayvista/i.test(picked.get('airbnb') || ''), picked.get('airbnb'));
+check('Booking.com includes StayVista brand', /stayvista/i.test(picked.get('booking') || ''), picked.get('booking'));
+check('MakeMyTrip includes StayVista brand', /stayvista/i.test(picked.get('makemytrip') || ''), picked.get('makemytrip'));
+check('Agoda includes StayVista brand', /stayvista/i.test(picked.get('agoda') || ''), picked.get('agoda'));
+check('Goibibo includes StayVista brand', /stayvista/i.test(picked.get('goibibo') || ''), picked.get('goibibo'));
 check('Airbnb leaves the city out', !/lonavala/i.test(picked.get('airbnb') || ''), picked.get('airbnb'));
 check('Airbnb avoids pipe separators', !(picked.get('airbnb') || '').includes('|'), picked.get('airbnb'));
 check('Booking.com leads with the house name', /^Bel Air Mansion/.test(picked.get('booking') || ''), picked.get('booking'));

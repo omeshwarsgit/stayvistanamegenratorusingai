@@ -1,0 +1,142 @@
+[
+  {
+    "run_id": "RUN_001",
+    "timestamp": "2026-09-21 12:56:22",
+    "input_file": "data/input_properties_batch_50.xlsx",
+    "output_file": "output/OTA_Name_Suggestions_RUN_001.xlsx",
+    "latest_file": "output/OTA_Name_Suggestions_Latest.xlsx",
+    "total_records": 200,
+    "overflows_fixed": 100,
+    "status": "completed"
+  },
+  {
+    "run_id": "RUN_002",
+    "timestamp": "2026-09-21 12:56:31",
+    "input_file": "data/input_properties_batch_50.xlsx",
+    "output_file": "output/OTA_Name_Suggestions_RUN_002.xlsx",
+    "latest_file": "output/OTA_Name_Suggestions_Latest.xlsx",
+    "total_records": 200,
+    "overflows_fixed": 100,
+    "status": "completed"
+  },
+  {
+    "run_id": "RUN_003",
+    "timestamp": "2026-09-21 12:57:57",
+    "input_file": "data/input_properties_batch_50.xlsx",
+    "output_file": "output/OTA_Name_Suggestions_RUN_003.xlsx",
+    "latest_file": "output/OTA_Name_Suggestions_Latest.xlsx",
+    "total_records": 200,
+    "overflows_fixed": 100,
+    "status": "completed"
+  },
+  {
+    "run_id": "RUN_004",
+    "timestamp": "2026-09-21 12:59:58",
+    "input_file": "data/input_properties_batch_50.xlsx",
+    "output_file": "output/OTA_Name_Suggestions_RUN_004.xlsx",
+    "latest_file": "output/OTA_Name_Suggestions_Latest.xlsx",
+    "total_records": 200,
+    "overflows_fixed": 100,
+    "status": "completed"
+  },
+  {
+    "run_id": "RUN_005",
+    "timestamp": "2026-09-21 13:01:10",
+    "input_file": "data/input_properties_batch_50.xlsx",
+    "output_file": "output/OTA_Name_Suggestions_RUN_005.xlsx",
+    "latest_file": "output/OTA_Name_Suggestions_Latest.xlsx",
+    "total_records": 200,
+    "overflows_fixed": 100,
+    "status": "completed"
+  },
+  {
+    "run_id": "RUN_006",
+    "timestamp": "2026-09-21 13:01:40",
+    "input_file": "data/input_properties_batch_50.xlsx",
+    "output_file": "output/OTA_Name_Suggestions_RUN_006.xlsx",
+    "latest_file": "output/OTA_Name_Suggestions_Latest.xlsx",
+    "total_records": 200,
+    "overflows_fixed": 100,
+    "status": "completed"
+  },
+  {
+    "run_id": "RUN_007",
+    "timestamp": "2026-09-21 13:02:52",
+    "input_file": "data/input_properties_batch_50.xlsx",
+    "output_file": "output/OTA_Name_Suggestions_RUN_007.xlsx",
+    "latest_file": "output/OTA_Name_Suggestions_Latest.xlsx",
+    "total_records": 200,
+    "overflows_fixed": 100,
+    "status": "completed"
+  },
+  {
+    "run_id": "RUN_008",
+    "timestamp": "2026-09-21 13:02:54",
+    "input_file": "data/input_properties_batch_50.xlsx",
+    "output_file": "output/OTA_Name_Suggestions_RUN_008.xlsx",
+    "latest_file": "output/OTA_Name_Suggestions_Latest.xlsx",
+    "total_records": 200,
+    "overflows_fixed": 100,
+    "status": "completed"
+  },
+  {
+    "run_id": "RUN_009",
+    "timestamp": "2026-09-21 13:05:29",
+    "input_file": "data/input_properties_batch_50.xlsx",
+    "output_file": "output/OTA_Name_Suggestions_RUN_009.xlsx",
+    "latest_file": "output/OTA_Name_Suggestions_Latest.xlsx",
+    "total_records": 200,
+    "overflows_fixed": 100,
+    "status": "completed"
+  },
+  {
+    "run_id": "RUN_010",
+    "timestamp": "2026-09-21 14:20:34",
+    "input_file": "data/input_properties_batch_50.xlsx",
+    "output_file": "output/OTA_Name_Suggestions_RUN_010.xlsx",
+    "latest_file": "output/OTA_Name_Suggestions_Latest.xlsx",
+    "total_records": 200,
+    "overflows_fixed": 100,
+    "status": "completed"
+  },
+  {
+    "run_id": "RUN_011",
+    "timestamp": "2026-09-21 14:38:09",
+    "input_file": "data/input_properties_batch_50.xlsx",
+    "output_file": "output/OTA_Name_Suggestions_RUN_011.xlsx",
+    "latest_file": "output/OTA_Name_Suggestions_Latest.xlsx",
+    "total_records": 200,
+    "overflows_fixed": 100,
+    "status": "completed"
+  },
+  {
+    "run_id": "RUN_012",
+    "timestamp": "2026-09-21 14:42:21",
+    "input_file": "data/input_properties_batch_50.xlsx",
+    "output_file": "output/OTA_Name_Suggestions_RUN_012.xlsx",
+    "latest_file": "output/OTA_Name_Suggestions_Latest.xlsx",
+    "total_records": 200,
+    "overflows_fixed": 100,
+    "status": "completed"
+  },
+  {
+    "run_id": "RUN_013",
+    "timestamp": "2026-09-21 15:18:35",
+    "input_file": "data/input_properties_batch_50.xlsx",
+    "output_file": "output/OTA_Name_Suggestions_RUN_013.xlsx",
+    "latest_file": "output/OTA_Name_Suggestions_Latest.xlsx",
+    "total_records": 200,
+    "overflows_fixed": 100,
+    "status": "completed"
+  },
+  {
+    "run_id": "RUN_014",
+    "timestamp": "2026-09-21 15:18:44",
+    "input_file": "data/input_properties_batch_50.xlsx",
+    "output_file": "output/OTA_Name_Suggestions_RUN_014.xlsx",
+    "latest_file": "output/OTA_Name_Suggestions_Latest.xlsx",
+    "total_records": 200,
+    "overflows_fixed": 100,
+    "status": "completed"
+  }
+]

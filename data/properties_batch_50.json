@@ -1,0 +1,2843 @@
+[
+  {
+    "sv_id": 75,
+    "brand_name": "Princess",
+    "bhk": 3,
+    "property_type": "Villa",
+    "city": "Lonavala",
+    "usps": [
+      "Infinity Pool",
+      "Lawn"
+    ],
+    "otas": {
+      "Agoda": {
+        "listing_id": 10567128.0,
+        "listing_url": "https://www.agoda.com/en-in/princess-villa-by-vista-rooms/hotel/pune-in.html",
+        "current_title": "StayVista's Princess - A Villa with Infinity Pool & Breathtaking Views",
+        "current_length": 70,
+        "suggested_title": "3-Bedroom Princess Villa in Lonavala",
+        "suggested_length": 36,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 70/50 chars (truncated in search cards)"
+      },
+      "Airbnb": {
+        "listing_id": "1217140775649212419",
+        "listing_url": "https://www.airbnb.co.in/rooms/1217140775649212419",
+        "current_title": "3BR |Pool+Lawn|StayVista| Princess Villa@Lonavala",
+        "current_length": 49,
+        "suggested_title": "3BHK Princess \u2022 Infinity Pool & Lawn",
+        "suggested_length": 36,
+        "limit": 44,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 49/44 chars (truncated in search cards); Removed non-compliant/cluttered characters ('|', '@', '+'); Removed redundant brand name on Airbnb (saves space for top USP)"
+      },
+      "Booking.com": {
+        "listing_id": 2741511.0,
+        "listing_url": "https://www.booking.com/hotel/in/princess-villa-lonavala.html",
+        "current_title": "StayVista's Princess - A Villa with Infinity Pool & Breathtaking Views",
+        "current_length": 70,
+        "suggested_title": "Princess Villa - 3BHK with Infinity Pool",
+        "suggested_length": 40,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 70/50 chars (truncated in search cards)"
+      },
+      "MakeMyTrip": {
+        "listing_id": 1000225373.0,
+        "listing_url": "https://www.makemytrip.com/hotels/hotel-details/?hotelId=201901091614188386&_uCurrency=INR&checkin=11252025&checkout=11262025&city=CTAGR&country=IN&funnelType=getaway&lat=27.16779&lng=78.04893&locusId=ZNDEL67F7E280&locusType=zone&rank=1&roomStayQualifier=2e0e&seekSummaryRequired=false&viewType=LUXE&mtkeys=defaultMtkey",
+        "current_title": "StayVista | Villa Princess",
+        "current_length": 26,
+        "suggested_title": "3BHK Princess Villa \u2022 Infinity Pool \u2022 Lonavala",
+        "suggested_length": 46,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Removed non-compliant/cluttered characters ('|', '@', '+'); Added prominent BHK prefix for domestic filter matching"
+      }
+    }
+  },
+  {
+    "sv_id": 57,
+    "brand_name": "Santoni Farms",
+    "bhk": 3,
+    "property_type": "Villa",
+    "city": "Karjat",
+    "usps": [
+      "Pool",
+      "River View",
+      "Orchard"
+    ],
+    "otas": {
+      "Agoda": {
+        "listing_id": 10567138.0,
+        "listing_url": "https://www.agoda.com/en-in/santoni-farms/hotel/karjat-in.html",
+        "current_title": "StayVista's Santoni Farms - Riverside Bliss with Pool, Orchard & Activities",
+        "current_length": 75,
+        "suggested_title": "3-Bedroom Santoni Farms Villa, Karjat w/ Pool",
+        "suggested_length": 45,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 75/50 chars (truncated in search cards)"
+      },
+      "Airbnb": {
+        "listing_id": 17819849.0,
+        "listing_url": "https://www.airbnb.co.in/rooms/17819849",
+        "current_title": "StayVista at Santoni Farms - 3 BR",
+        "current_length": 33,
+        "suggested_title": "3BHK Santoni Farms \u2022 Pool & River View",
+        "suggested_length": 38,
+        "limit": 44,
+        "status": "ready_to_sync",
+        "change_rationale": "Removed redundant brand name on Airbnb (saves space for top USP)"
+      },
+      "Booking.com": {
+        "listing_id": 2199739.0,
+        "listing_url": "https://www.booking.com/hotel/in/santoni-farms-karjat.html",
+        "current_title": "StayVista's Santoni Farms - Riverside Bliss with Pool, Orchard & Activities",
+        "current_length": 75,
+        "suggested_title": "Santoni Farms Villa by StayVista - 3BHK w/ Pool",
+        "suggested_length": 47,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 75/50 chars (truncated in search cards)"
+      },
+      "MakeMyTrip": {
+        "listing_id": 1000225019.0,
+        "listing_url": "https://www.makemytrip.com/hotels/hotel-details/?hotelId=201812311710071317&_uCurrency=INR&checkin=11252025&checkout=11262025&city=CTAGR&country=IN&funnelType=getaway&lat=27.16779&lng=78.04893&locusId=ZNDEL67F7E280&locusType=zone&rank=1&roomStayQualifier=2e0e&seekSummaryRequired=false&viewType=LUXE&mtkeys=defaultMtkey",
+        "current_title": "StayVista | Santoni Farms Pool Villa",
+        "current_length": 36,
+        "suggested_title": "3BHK Santoni Farms Villa \u2022 Pool \u2022 Karjat",
+        "suggested_length": 40,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Removed non-compliant/cluttered characters ('|', '@', '+'); Added prominent BHK prefix for domestic filter matching"
+      }
+    }
+  },
+  {
+    "sv_id": 29,
+    "brand_name": "Serene",
+    "bhk": 3,
+    "property_type": "Villa",
+    "city": "Karjat",
+    "usps": [
+      "Plunge Pool"
+    ],
+    "otas": {
+      "Agoda": {
+        "listing_id": 10567142.0,
+        "listing_url": "https://www.agoda.com/en-in/serene-by-vista-rooms/hotel/karjat-in.html",
+        "current_title": "Serene Villa by StayVista - A Hill-View Villa with Plunge pool",
+        "current_length": 62,
+        "suggested_title": "3-Bedroom Serene Villa, Karjat w/ Plunge Pool",
+        "suggested_length": 45,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 62/50 chars (truncated in search cards)"
+      },
+      "Airbnb": {
+        "listing_id": "1588364350289160966",
+        "listing_url": "https://www.airbnb.co.in/rooms/1588364350289160966",
+        "current_title": "StayVista at Serene w/ Pool - Karjat",
+        "current_length": 36,
+        "suggested_title": "3BHK Serene Villa w/ Plunge Pool",
+        "suggested_length": 32,
+        "limit": 44,
+        "status": "ready_to_sync",
+        "change_rationale": "Removed redundant brand name on Airbnb (saves space for top USP)"
+      },
+      "Booking.com": {
+        "listing_id": 2394350.0,
+        "listing_url": "https://www.booking.com/hotel/in/3bhk-villa-in-karjat.html",
+        "current_title": "Serene Villa by StayVista - A Hill-View Villa with Plunge pool",
+        "current_length": 62,
+        "suggested_title": "Serene Villa by StayVista - 3BHK w/ Plunge Pool",
+        "suggested_length": 47,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 62/50 chars (truncated in search cards)"
+      },
+      "MakeMyTrip": {
+        "listing_id": 1000342053.0,
+        "listing_url": "https://www.makemytrip.com/hotels/hotel-details/?hotelId=202104011946227630&_uCurrency=INR&checkin=11252025&checkout=11262025&city=CTAGR&country=IN&funnelType=getaway&lat=27.16779&lng=78.04893&locusId=ZNDEL67F7E280&locusType=zone&rank=1&roomStayQualifier=2e0e&seekSummaryRequired=false&viewType=LUXE&mtkeys=defaultMtkey",
+        "current_title": "StayVista | Vista Serene 3 BHK Villa",
+        "current_length": 36,
+        "suggested_title": "3BHK Serene Villa \u2022 Plunge Pool \u2022 Karjat",
+        "suggested_length": 40,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Removed non-compliant/cluttered characters ('|', '@', '+')"
+      }
+    }
+  },
+  {
+    "sv_id": 125,
+    "brand_name": "La Petite Maison",
+    "bhk": 3,
+    "property_type": "Villa",
+    "city": "Lonavala",
+    "usps": [
+      "Mountain View",
+      "Valley View",
+      "Lawn"
+    ],
+    "otas": {
+      "Agoda": {
+        "listing_id": 10571753.0,
+        "listing_url": "https://www.agoda.com/en-in/la-petite-maison/hotel/lonavala-in.html",
+        "current_title": "StayVista at La Petite Maison",
+        "current_length": 29,
+        "suggested_title": "3-Bedroom La Petite Maison Villa in Lonavala",
+        "suggested_length": 44,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Structured into clean standard formula: Size + Name + USP + Location"
+      },
+      "Airbnb": {
+        "listing_id": 22575625.0,
+        "listing_url": "https://www.airbnb.co.in/rooms/22575625",
+        "current_title": "3BR Mountain View | StayVista La Petite | Lonavala",
+        "current_length": 50,
+        "suggested_title": "3BHK La Petite Maison Villa w/ Mountain View",
+        "suggested_length": 44,
+        "limit": 44,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 50/44 chars (truncated in search cards); Removed non-compliant/cluttered characters ('|', '@', '+'); Removed redundant brand name on Airbnb (saves space for top USP)"
+      },
+      "Booking.com": {
+        "listing_id": 3023704.0,
+        "listing_url": "https://www.booking.com/hotel/in/la-petite-maison.html",
+        "current_title": "La Petite Maison Villa by VEO, StayVista - 3BHK with Valley View & Lawn",
+        "current_length": 71,
+        "suggested_title": "La Petite Maison Villa - 3BHK with Mountain View",
+        "suggested_length": 48,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 71/50 chars (truncated in search cards)"
+      },
+      "MakeMyTrip": {
+        "listing_id": 1000166081.0,
+        "listing_url": "https://www.makemytrip.com/hotels/hotel-details/?hotelId=201802131542209732&_uCurrency=INR&checkin=11252025&checkout=11262025&city=CTAGR&country=IN&funnelType=getaway&lat=27.16779&lng=78.04893&locusId=ZNDEL67F7E280&locusType=zone&rank=1&roomStayQualifier=2e0e&seekSummaryRequired=false&viewType=LUXE&mtkeys=defaultMtkey",
+        "current_title": "StayVista | La Petite Maison 3 BHK Villa",
+        "current_length": 40,
+        "suggested_title": "3BHK La Petite Maison \u2022 Mountain View \u2022 Lonavala",
+        "suggested_length": 48,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Removed non-compliant/cluttered characters ('|', '@', '+')"
+      }
+    }
+  },
+  {
+    "sv_id": 121,
+    "brand_name": "Stone  Bezze",
+    "bhk": 2,
+    "property_type": "House",
+    "city": "Nashik",
+    "usps": [
+      "Mountain View",
+      "Lake View",
+      "Jacuzzi",
+      "Lawn",
+      "Bonfire"
+    ],
+    "otas": {
+      "Agoda": {
+        "listing_id": 10571754.0,
+        "listing_url": "https://www.agoda.com/en-in/the-stone-house-2bhk-w-jacuzzi-near-sula-vineyards/hotel/nasik-in.html",
+        "current_title": "Stone House Bezze by StayVista with Lake view & Lawn - your perfect getaway",
+        "current_length": 75,
+        "suggested_title": "2-Bedroom Stone  Bezze House in Nashik",
+        "suggested_length": 38,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 75/50 chars (truncated in search cards)"
+      },
+      "Airbnb": {
+        "listing_id": 23407148.0,
+        "listing_url": "https://www.airbnb.co.in/rooms/23407148",
+        "current_title": "2BR StayVista Stone House Bezze@Nashik",
+        "current_length": 38,
+        "suggested_title": "2BHK Stone  Bezze House w/ Mountain View",
+        "suggested_length": 40,
+        "limit": 44,
+        "status": "ready_to_sync",
+        "change_rationale": "Removed non-compliant/cluttered characters ('|', '@', '+'); Removed redundant brand name on Airbnb (saves space for top USP)"
+      },
+      "Booking.com": {
+        "listing_id": 3145826.0,
+        "listing_url": "https://www.booking.com/hotel/in/beze-the-stone-house-nashik.html",
+        "current_title": "The Stone House in Beze by VEO, StayVista - 2BHK with Mountain View & Bonfire",
+        "current_length": 77,
+        "suggested_title": "Stone  Bezze House - 2BHK with Mountain View",
+        "suggested_length": 44,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 77/50 chars (truncated in search cards)"
+      },
+      "MakeMyTrip": {
+        "listing_id": 1000226101.0,
+        "listing_url": "https://www.makemytrip.com/hotels/hotel-details/?hotelId=201901141906422989&_uCurrency=INR&checkin=11252025&checkout=11262025&city=CTAGR&country=IN&funnelType=getaway&lat=27.16779&lng=78.04893&locusId=ZNDEL67F7E280&locusType=zone&rank=1&roomStayQualifier=2e0e&seekSummaryRequired=false&viewType=LUXE&mtkeys=defaultMtkey",
+        "current_title": "StayVista | The Stone House In Beze",
+        "current_length": 35,
+        "suggested_title": "2BHK Stone  Bezze House \u2022 Mountain View \u2022 Nashik",
+        "suggested_length": 48,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Removed non-compliant/cluttered characters ('|', '@', '+'); Added prominent BHK prefix for domestic filter matching"
+      }
+    }
+  },
+  {
+    "sv_id": 150,
+    "brand_name": "Moksh",
+    "bhk": 4,
+    "property_type": "Villa",
+    "city": "India",
+    "usps": [
+      "Jacuzzi",
+      "BBQ"
+    ],
+    "otas": {
+      "Agoda": {
+        "listing_id": 10571756.0,
+        "listing_url": "https://www.agoda.com/en-in/moksh/hotel/zirad-in.html",
+        "current_title": "StayVista at Moksh Villa - BBQ & Jacuzzi",
+        "current_length": 40,
+        "suggested_title": "4-Bedroom Moksh Villa, India w/ Jacuzzi",
+        "suggested_length": 39,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Structured into clean standard formula: Size + Name + USP + Location"
+      },
+      "Airbnb": {
+        "listing_id": "1730870489567411287",
+        "listing_url": "https://www.airbnb.co.in/rooms/1730870489567411287",
+        "current_title": "StayVista at Moksh Villa - 4BR -Jacuzzi & TT Table",
+        "current_length": 50,
+        "suggested_title": "4BHK Moksh \u2022 Jacuzzi & BBQ",
+        "suggested_length": 26,
+        "limit": 44,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 50/44 chars (truncated in search cards); Removed redundant brand name on Airbnb (saves space for top USP)"
+      },
+      "Booking.com": {
+        "listing_id": 3509007.0,
+        "listing_url": "https://www.booking.com/hotel/in/vista-moksh-villa.html",
+        "current_title": "StayVista's Moksh Villa - 4BHK with Pickle Ball & Sauna",
+        "current_length": 55,
+        "suggested_title": "Moksh Villa by StayVista - 4BHK w/ Jacuzzi",
+        "suggested_length": 42,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 55/50 chars (truncated in search cards)"
+      },
+      "MakeMyTrip": {
+        "listing_id": 1000226451.0,
+        "listing_url": "https://www.makemytrip.com/hotels/hotel-details/?hotelId=201901101244594913&_uCurrency=INR&checkin=11252025&checkout=11262025&city=CTAGR&country=IN&funnelType=getaway&lat=27.16779&lng=78.04893&locusId=ZNDEL67F7E280&locusType=zone&rank=1&roomStayQualifier=2e0e&seekSummaryRequired=false&viewType=LUXE&mtkeys=defaultMtkey",
+        "current_title": "StayVista | Moksh 4 BHK Villa",
+        "current_length": 29,
+        "suggested_title": "4BHK Moksh Villa \u2022 Jacuzzi \u2022 India",
+        "suggested_length": 34,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Removed non-compliant/cluttered characters ('|', '@', '+')"
+      }
+    }
+  },
+  {
+    "sv_id": 107,
+    "brand_name": "EL",
+    "bhk": 4,
+    "property_type": "Villa",
+    "city": "Lonavala",
+    "usps": [
+      "Pool",
+      "Lawn"
+    ],
+    "otas": {
+      "Agoda": {
+        "listing_id": 10571764.0,
+        "listing_url": "https://www.agoda.com/en-in/el-house-by-vista-rooms/hotel/lonavala-in.html",
+        "current_title": "El House by StayVista - Unwind in a Villa w/ Pool",
+        "current_length": 49,
+        "suggested_title": "4-Bedroom EL Villa, Lonavala w/ Pool",
+        "suggested_length": 36,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Structured into clean standard formula: Size + Name + USP + Location"
+      },
+      "Airbnb": {
+        "listing_id": 23135024.0,
+        "listing_url": "https://www.airbnb.co.in/rooms/23135024",
+        "current_title": "4bhk- Pvt Pool+Lawn-El House @Lonavala",
+        "current_length": 38,
+        "suggested_title": "4BHK EL \u2022 Pool & Lawn",
+        "suggested_length": 21,
+        "limit": 44,
+        "status": "ready_to_sync",
+        "change_rationale": "Removed non-compliant/cluttered characters ('|', '@', '+')"
+      },
+      "Booking.com": {
+        "listing_id": 3091825.0,
+        "listing_url": "https://www.booking.com/hotel/in/el-house-by-vista.html",
+        "current_title": "El House by StayVista - Unwind in a Villa with Pool and Lush Lawn",
+        "current_length": 65,
+        "suggested_title": "EL Villa by StayVista - 4BHK w/ Pool",
+        "suggested_length": 36,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 65/50 chars (truncated in search cards)"
+      },
+      "MakeMyTrip": {
+        "listing_id": 1000225472.0,
+        "listing_url": "https://www.makemytrip.com/hotels/hotel-details/?hotelId=201901091226204920&_uCurrency=INR&checkin=11252025&checkout=11262025&city=CTAGR&country=IN&funnelType=getaway&lat=27.16779&lng=78.04893&locusId=ZNDEL67F7E280&locusType=zone&rank=1&roomStayQualifier=2e0e&seekSummaryRequired=false&viewType=LUXE&mtkeys=defaultMtkey",
+        "current_title": "StayVista | EL House 4 BHK Villa",
+        "current_length": 32,
+        "suggested_title": "4BHK EL Villa \u2022 Pool \u2022 Lonavala",
+        "suggested_length": 31,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Removed non-compliant/cluttered characters ('|', '@', '+')"
+      }
+    }
+  },
+  {
+    "sv_id": 142,
+    "brand_name": "Retreat on Cloud 9 Homestay",
+    "bhk": 2,
+    "property_type": "Villa",
+    "city": "Lonavala",
+    "usps": [
+      "Orchard"
+    ],
+    "otas": {
+      "Agoda": {
+        "listing_id": 10571773.0,
+        "listing_url": "https://www.agoda.com/en-in/retreat-on-cloud-9-by-vista-rooms/hotel/lonavala-in.html",
+        "current_title": "Cosy Homestay by StayVista - A Tranquil Retreat on Cloud 9",
+        "current_length": 58,
+        "suggested_title": "2-Bedroom Villa in Lonavala w/ Orchard",
+        "suggested_length": 38,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 58/50 chars (truncated in search cards)"
+      },
+      "Airbnb": {
+        "listing_id": 24479920.0,
+        "listing_url": "https://www.airbnb.co.in/rooms/24479920",
+        "current_title": "Retreat on Cloud 9 Homestay with Vintage rooms",
+        "current_length": 46,
+        "suggested_title": "2BHK Retreat on Cloud 9 Homestay w/ Orchard",
+        "suggested_length": 43,
+        "limit": 44,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 46/44 chars (truncated in search cards)"
+      },
+      "Booking.com": {
+        "listing_id": 3369833.0,
+        "listing_url": "https://www.booking.com/hotel/in/retreat-on-cloud-9-lonavala.html",
+        "current_title": "StayVista's Retreat on Cloud 9 Homestay - 2BHK Mountain-View Homestay with Orchard",
+        "current_length": 82,
+        "suggested_title": "Retreat on Cloud 9 Homestay by StayVista - 2BHK Or",
+        "suggested_length": 50,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 82/50 chars (truncated in search cards)"
+      },
+      "MakeMyTrip": {
+        "listing_id": 1000226592.0,
+        "listing_url": "https://www.makemytrip.com/hotels/hotel-details/?hotelId=201901091424516381&_uCurrency=INR&checkin=11252025&checkout=11262025&city=CTAGR&country=IN&funnelType=getaway&lat=27.16779&lng=78.04893&locusId=ZNDEL67F7E280&locusType=zone&rank=1&roomStayQualifier=2e0e&seekSummaryRequired=false&viewType=LUXE&mtkeys=defaultMtkey",
+        "current_title": "StayVista | 2 BHK Retreat On Cloud 9 Villa",
+        "current_length": 42,
+        "suggested_title": "2BHK Villa \u2022 Orchard \u2022 Lonavala",
+        "suggested_length": 31,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Removed non-compliant/cluttered characters ('|', '@', '+')"
+      }
+    }
+  },
+  {
+    "sv_id": 462,
+    "brand_name": "Casa del Verde",
+    "bhk": 4,
+    "property_type": "Villa",
+    "city": "Alibaug",
+    "usps": [
+      "Private Pool",
+      "Lawn",
+      "Bonfire"
+    ],
+    "otas": {
+      "Agoda": {
+        "listing_id": 10571775.0,
+        "listing_url": "https://www.agoda.com/4bhk-private-pool-near-sula-vineyards/hotel/alibaug-in.html",
+        "current_title": "StayVista at Casa del Verde",
+        "current_length": 27,
+        "suggested_title": "4-Bedroom Casa del Verde Villa in Alibaug",
+        "suggested_length": 41,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Structured into clean standard formula: Size + Name + USP + Location"
+      },
+      "Airbnb": {
+        "listing_id": 35356405.0,
+        "listing_url": "https://www.airbnb.co.in/rooms/35356405",
+        "current_title": "4BR- @Casa Del Verde, w/pool, lawn &bonfire",
+        "current_length": 43,
+        "suggested_title": "4BHK Casa del Verde \u2022 Private Pool & Lawn",
+        "suggested_length": 41,
+        "limit": 44,
+        "status": "ready_to_sync",
+        "change_rationale": "Removed non-compliant/cluttered characters ('|', '@', '+')"
+      },
+      "Booking.com": {
+        "listing_id": 5164107.0,
+        "listing_url": "https://www.booking.com/hotel/in/casa-del-verde-by-vista-rooms.html",
+        "current_title": "StayVista's Casa Del Verde - 4BHK Mountain-View Villa with Private Pool",
+        "current_length": 71,
+        "suggested_title": "Casa del Verde Villa - 4BHK with Private Pool",
+        "suggested_length": 45,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 71/50 chars (truncated in search cards)"
+      },
+      "MakeMyTrip": {
+        "listing_id": 1000254275.0,
+        "listing_url": "https://www.makemytrip.com/hotels/hotel-details/?hotelId=201906281817296202&_uCurrency=INR&checkin=11252025&checkout=11262025&city=CTAGR&country=IN&funnelType=getaway&lat=27.16779&lng=78.04893&locusId=ZNDEL67F7E280&locusType=zone&rank=1&roomStayQualifier=2e0e&seekSummaryRequired=false&viewType=LUXE&mtkeys=defaultMtkey",
+        "current_title": "StayVista | Casa Del Verde 4 BHK Villa",
+        "current_length": 38,
+        "suggested_title": "4BHK Casa del Verde Villa \u2022 Private Pool \u2022 Alibaug",
+        "suggested_length": 50,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Removed non-compliant/cluttered characters ('|', '@', '+')"
+      }
+    }
+  },
+  {
+    "sv_id": 166,
+    "brand_name": "Le Sutra Great Escapes",
+    "bhk": 3,
+    "property_type": "Villa",
+    "city": "Lonavala",
+    "usps": [
+      "Pool"
+    ],
+    "otas": {
+      "Agoda": {
+        "listing_id": 10571778.0,
+        "listing_url": "https://www.agoda.com/en-in/breeze-in-the-hills-3bhk-luxury-pool-villa/hotel/lonavala-in.html",
+        "current_title": "StayVista's Le Sutra Great Escapes - Geometrica",
+        "current_length": 47,
+        "suggested_title": "3-Bedroom Le Sutra Great Escapes Villa in Lonavala",
+        "suggested_length": 50,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Structured into clean standard formula: Size + Name + USP + Location"
+      },
+      "Airbnb": {
+        "listing_id": 43039748.0,
+        "listing_url": "https://www.airbnb.co.in/rooms/43039748",
+        "current_title": "Le Sutra Geometrica- 3BR Luxe Pool Villa, Lonavala",
+        "current_length": 50,
+        "suggested_title": "3BHK Le Sutra Great Escapes Villa w/ Pool",
+        "suggested_length": 41,
+        "limit": 44,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 50/44 chars (truncated in search cards)"
+      },
+      "Booking.com": {
+        "listing_id": 3620836.0,
+        "listing_url": "https://www.booking.com/hotel/in/breeze-on-the-hill.html",
+        "current_title": "StayVista's Le Sutra Great Escapes - Geometrica - 3BHK Villa with Bar",
+        "current_length": 69,
+        "suggested_title": "Le Sutra Great Escapes Villa - 3BHK with Pool",
+        "suggested_length": 45,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 69/50 chars (truncated in search cards)"
+      },
+      "MakeMyTrip": {
+        "listing_id": 1000226533.0,
+        "listing_url": "https://www.makemytrip.com/hotels/hotel-details/?hotelId=201901161617091478&_uCurrency=INR&checkin=11252025&checkout=11262025&city=CTAGR&country=IN&funnelType=getaway&lat=27.16779&lng=78.04893&locusId=ZNDEL67F7E280&locusType=zone&rank=1&roomStayQualifier=2e0e&seekSummaryRequired=false&viewType=LUXE&mtkeys=defaultMtkey",
+        "current_title": "StayVista | Le Sutra Great Escapes - Geometrica",
+        "current_length": 47,
+        "suggested_title": "3BHK Le Sutra Great Escapes \u2022 Pool \u2022 Lonavala",
+        "suggested_length": 45,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Removed non-compliant/cluttered characters ('|', '@', '+'); Added prominent BHK prefix for domestic filter matching"
+      }
+    }
+  },
+  {
+    "sv_id": 100,
+    "brand_name": "Bungalow 89",
+    "bhk": 4,
+    "property_type": "Villa",
+    "city": "Lonavala",
+    "usps": [
+      "Private Pool"
+    ],
+    "otas": {
+      "Agoda": {
+        "listing_id": 10571780.0,
+        "listing_url": "https://www.agoda.com/en-in/bungalow-89/hotel/lonavala-in.html",
+        "current_title": "StayVista at Bungalow 89",
+        "current_length": 24,
+        "suggested_title": "4-Bedroom Bungalow 89 Villa in Lonavala",
+        "suggested_length": 39,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Structured into clean standard formula: Size + Name + USP + Location"
+      },
+      "Airbnb": {
+        "listing_id": 39373208.0,
+        "listing_url": "https://www.airbnb.co.in/rooms/39373208",
+        "current_title": "4BR Scenic View Stay | Bungalow 89 Lonavala",
+        "current_length": 43,
+        "suggested_title": "4BHK Bungalow 89 Villa w/ Private Pool",
+        "suggested_length": 38,
+        "limit": 44,
+        "status": "ready_to_sync",
+        "change_rationale": "Removed non-compliant/cluttered characters ('|', '@', '+')"
+      },
+      "Booking.com": {
+        "listing_id": 3041071.0,
+        "listing_url": "https://www.booking.com/hotel/in/bungalow-89.html",
+        "current_title": "Bungalow 89 by StayVista - A hill-view villa adorned with eclectic interiors for a truly unique & captivating stay",
+        "current_length": 114,
+        "suggested_title": "Bungalow 89 Villa - 4BHK with Private Pool",
+        "suggested_length": 42,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 114/50 chars (truncated in search cards)"
+      },
+      "MakeMyTrip": {
+        "listing_id": 1000281794.0,
+        "listing_url": "https://www.makemytrip.com/hotels/hotel-details/?hotelId=201911051733158719&_uCurrency=INR&checkin=11252025&checkout=11262025&city=CTAGR&country=IN&funnelType=getaway&lat=27.16779&lng=78.04893&locusId=ZNDEL67F7E280&locusType=zone&rank=1&roomStayQualifier=2e0e&seekSummaryRequired=false&viewType=LUXE&mtkeys=defaultMtkey",
+        "current_title": "StayVista at Bungalow 89",
+        "current_length": 24,
+        "suggested_title": "4BHK Bungalow 89 Villa \u2022 Private Pool \u2022 Lonavala",
+        "suggested_length": 48,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Added prominent BHK prefix for domestic filter matching"
+      }
+    }
+  },
+  {
+    "sv_id": 288,
+    "brand_name": "Shivom  12",
+    "bhk": 3,
+    "property_type": "Villa",
+    "city": "Lonavala",
+    "usps": [
+      "Infinity Pool",
+      "Lake View",
+      "Bonfire"
+    ],
+    "otas": {
+      "Agoda": {
+        "listing_id": 10572577.0,
+        "listing_url": "https://www.agoda.com/en-in/shivom-villa-12-by-vista-rooms/hotel/lonavala-in.html",
+        "current_title": "Shivom Villa 12 by Vista Rooms",
+        "current_length": 30,
+        "suggested_title": "3-Bedroom Shivom  12 Villa in Lonavala",
+        "suggested_length": 38,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Structured into clean standard formula: Size + Name + USP + Location"
+      },
+      "Airbnb": {
+        "listing_id": "656086305778944797",
+        "listing_url": "https://www.airbnb.co.in/rooms/656086305778944797",
+        "current_title": "3R Villa w/infinity pool+bonfire-ShivomVilla@Pawna",
+        "current_length": 50,
+        "suggested_title": "3BHK Shivom  12 \u2022 Infinity Pool & Lake View",
+        "suggested_length": 43,
+        "limit": 44,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 50/44 chars (truncated in search cards); Removed non-compliant/cluttered characters ('|', '@', '+')"
+      },
+      "Booking.com": {
+        "listing_id": 4474235.0,
+        "listing_url": "https://www.booking.com/hotel/in/shivom-villa-12-by-vista-rooms.html",
+        "current_title": "Shivom Villa 12 - Pawna by Gram's, StayVista - 3BHK with Lake View & Infinity Pool",
+        "current_length": 82,
+        "suggested_title": "Shivom  12 Villa - 3BHK with Infinity Pool",
+        "suggested_length": 42,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 82/50 chars (truncated in search cards)"
+      },
+      "MakeMyTrip": {
+        "listing_id": 1000247828.0,
+        "listing_url": "https://www.makemytrip.com/hotels/hotel-details/?hotelId=201905251444585405&_uCurrency=INR&checkin=11252025&checkout=11262025&city=CTAGR&country=IN&funnelType=getaway&lat=27.16779&lng=78.04893&locusId=ZNDEL67F7E280&locusType=zone&rank=1&roomStayQualifier=2e0e&seekSummaryRequired=false&viewType=LUXE&mtkeys=defaultMtkey",
+        "current_title": "StayVista | Shivom Villa 12",
+        "current_length": 27,
+        "suggested_title": "3BHK Shivom  12 Villa \u2022 Infinity Pool \u2022 Lonavala",
+        "suggested_length": 48,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Removed non-compliant/cluttered characters ('|', '@', '+'); Added prominent BHK prefix for domestic filter matching"
+      }
+    }
+  },
+  {
+    "sv_id": 223,
+    "brand_name": "Greenwoods  10",
+    "bhk": 5,
+    "property_type": "Villa",
+    "city": "Lonavala",
+    "usps": [
+      "Private Pool"
+    ],
+    "otas": {
+      "Agoda": {
+        "listing_id": 10572627.0,
+        "listing_url": "https://www.agoda.com/en-in/5bhk-greenwoods-with-pvt-pool-tt-table-games-h10572627/hotel/lonavala-in.html",
+        "current_title": "Greenwoods Ten by Vista Rooms",
+        "current_length": 29,
+        "suggested_title": "5-Bedroom Greenwoods  10 Villa in Lonavala",
+        "suggested_length": 42,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Structured into clean standard formula: Size + Name + USP + Location"
+      },
+      "Airbnb": {
+        "listing_id": "655495556116702783",
+        "listing_url": "https://www.airbnb.co.in/rooms/655495556116702783",
+        "current_title": "5BR|Pool|StayVista| Greenwoods Villa 10 @Lonavala",
+        "current_length": 49,
+        "suggested_title": "5BHK Greenwoods  10 Villa w/ Private Pool",
+        "suggested_length": 41,
+        "limit": 44,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 49/44 chars (truncated in search cards); Removed non-compliant/cluttered characters ('|', '@', '+'); Removed redundant brand name on Airbnb (saves space for top USP)"
+      },
+      "Booking.com": {
+        "listing_id": 4078492.0,
+        "listing_url": "https://www.booking.com/hotel/in/greenwoods-villa-10.html",
+        "current_title": "StayVista's Greenwoods Villa 10 - City-Center Villa with Private Pool, Terrace, Lift & Carrom Board",
+        "current_length": 99,
+        "suggested_title": "Greenwoods  10 Villa - 5BHK with Private Pool",
+        "suggested_length": 45,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 99/50 chars (truncated in search cards)"
+      },
+      "MakeMyTrip": {
+        "listing_id": 1000225625.0,
+        "listing_url": "https://www.makemytrip.com/hotels/hotel-details/?hotelId=201901161132546958&_uCurrency=INR&checkin=11252025&checkout=11262025&city=CTAGR&country=IN&funnelType=getaway&lat=27.16779&lng=78.04893&locusId=ZNDEL67F7E280&locusType=zone&rank=1&roomStayQualifier=2e0e&seekSummaryRequired=false&viewType=LUXE&mtkeys=defaultMtkey",
+        "current_title": "StayVista | 5 BHK Greenwoods Ten Villa",
+        "current_length": 38,
+        "suggested_title": "5BHK Greenwoods  10 \u2022 Private Pool \u2022 Lonavala",
+        "suggested_length": 45,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Removed non-compliant/cluttered characters ('|', '@', '+')"
+      }
+    }
+  },
+  {
+    "sv_id": 221,
+    "brand_name": "Azul",
+    "bhk": 4,
+    "property_type": "Villa",
+    "city": "Lonavala",
+    "usps": [
+      "Pool",
+      "Jacuzzi",
+      "Lawn"
+    ],
+    "otas": {
+      "Agoda": {
+        "listing_id": 10572629.0,
+        "listing_url": "https://www.agoda.com/azul-4bhk-luxury-villa-with-pool-mini-theater/hotel/lonavala-in.html",
+        "current_title": "StayVista at Villa Azul",
+        "current_length": 23,
+        "suggested_title": "4-Bedroom Azul Villa, Lonavala w/ Pool",
+        "suggested_length": 38,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Structured into clean standard formula: Size + Name + USP + Location"
+      },
+      "Airbnb": {
+        "listing_id": "1508607427164556350",
+        "listing_url": "https://www.airbnb.co.in/rooms/1508607427164556350",
+        "current_title": "4bhk-Pool & Lawn -StayVista@Villa Azul, Lonavala",
+        "current_length": 48,
+        "suggested_title": "4BHK Azul \u2022 Pool & Jacuzzi",
+        "suggested_length": 26,
+        "limit": 44,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 48/44 chars (truncated in search cards); Removed non-compliant/cluttered characters ('|', '@', '+'); Removed redundant brand name on Airbnb (saves space for top USP)"
+      },
+      "Booking.com": {
+        "listing_id": 4074534.0,
+        "listing_url": "https://www.booking.com/hotel/in/villa-azul.html",
+        "current_title": "StayVista's Villa Azul - 4BHK with Pool Table & Jacuzzi",
+        "current_length": 55,
+        "suggested_title": "Azul Villa by StayVista - 4BHK w/ Pool",
+        "suggested_length": 38,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 55/50 chars (truncated in search cards)"
+      },
+      "MakeMyTrip": {
+        "listing_id": 1000270590.0,
+        "listing_url": "https://www.makemytrip.com/hotels/hotel-details/?hotelId=201909201732439088&_uCurrency=INR&checkin=11252025&checkout=11262025&city=CTAGR&country=IN&funnelType=getaway&lat=27.16779&lng=78.04893&locusId=ZNDEL67F7E280&locusType=zone&rank=1&roomStayQualifier=2e0e&seekSummaryRequired=false&viewType=LUXE&mtkeys=defaultMtkey",
+        "current_title": "Stayvista | Entire 4 BHK Villa Azul",
+        "current_length": 35,
+        "suggested_title": "4BHK Azul Villa \u2022 Pool \u2022 Lonavala",
+        "suggested_length": 33,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Removed non-compliant/cluttered characters ('|', '@', '+')"
+      }
+    }
+  },
+  {
+    "sv_id": 209,
+    "brand_name": "Ashore",
+    "bhk": 6,
+    "property_type": "Villa",
+    "city": "Goa",
+    "usps": [
+      "Infinity Pool"
+    ],
+    "otas": {
+      "Agoda": {
+        "listing_id": 10572644.0,
+        "listing_url": "https://www.agoda.com/en-in/ashore-by-vista-rooms/hotel/goa-in.html",
+        "current_title": "Ashore by Vista Rooms",
+        "current_length": 21,
+        "suggested_title": "6-Bedroom Ashore Villa, Goa w/ Infinity Pool",
+        "suggested_length": 44,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Structured into clean standard formula: Size + Name + USP + Location"
+      },
+      "Airbnb": {
+        "listing_id": "669967418523452574",
+        "listing_url": "https://www.airbnb.co.in/rooms/669967418523452574",
+        "current_title": "6BR|Rooftop Pool+Beach View|StayVista| Ashore @Goa",
+        "current_length": 50,
+        "suggested_title": "6BHK Ashore Villa w/ Infinity Pool",
+        "suggested_length": 34,
+        "limit": 44,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 50/44 chars (truncated in search cards); Removed non-compliant/cluttered characters ('|', '@', '+'); Removed redundant brand name on Airbnb (saves space for top USP)"
+      },
+      "Booking.com": {
+        "listing_id": 3958897.0,
+        "listing_url": "https://www.booking.com/hotel/in/ashore-by-vista.html",
+        "current_title": "Ashore By Vista - Morjim by StayVista - 6BHK Beach-View Villa with Infinity Pool",
+        "current_length": 80,
+        "suggested_title": "Ashore Villa by StayVista - 6BHK w/ Infinity Pool",
+        "suggested_length": 49,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 80/50 chars (truncated in search cards)"
+      },
+      "MakeMyTrip": {
+        "listing_id": 1000222087.0,
+        "listing_url": "https://www.makemytrip.com/hotels/hotel-details/?hotelId=201812051412317595&_uCurrency=INR&checkin=11252025&checkout=11262025&city=CTAGR&country=IN&funnelType=getaway&lat=27.16779&lng=78.04893&locusId=ZNDEL67F7E280&locusType=zone&rank=1&roomStayQualifier=2e0e&seekSummaryRequired=false&viewType=LUXE&mtkeys=defaultMtkey",
+        "current_title": "StayVista | Ashore 6 BHK Villa",
+        "current_length": 30,
+        "suggested_title": "6BHK Ashore Villa \u2022 Infinity Pool \u2022 Goa",
+        "suggested_length": 39,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Removed non-compliant/cluttered characters ('|', '@', '+')"
+      }
+    }
+  },
+  {
+    "sv_id": 302,
+    "brand_name": "Arcadia",
+    "bhk": 3,
+    "property_type": "Villa",
+    "city": "Goa",
+    "usps": [
+      "Pool"
+    ],
+    "otas": {
+      "Agoda": {
+        "listing_id": 10572646.0,
+        "listing_url": "https://www.agoda.com/villa-arcadia-by-vista-rooms/hotel/goa-in.html",
+        "current_title": "Villa Arcadia by Vista Rooms",
+        "current_length": 28,
+        "suggested_title": "3-Bedroom Arcadia Villa, Goa w/ Pool",
+        "suggested_length": 36,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Structured into clean standard formula: Size + Name + USP + Location"
+      },
+      "Airbnb": {
+        "listing_id": "1572932592590491421",
+        "listing_url": "https://www.airbnb.co.in/rooms/1572932592590491421",
+        "current_title": "3BR|Pvt Pool+Lux|StayVista| Arcadia Villa@Candolim",
+        "current_length": 50,
+        "suggested_title": "3BHK Arcadia Villa w/ Pool",
+        "suggested_length": 26,
+        "limit": 44,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 50/44 chars (truncated in search cards); Removed non-compliant/cluttered characters ('|', '@', '+'); Removed redundant brand name on Airbnb (saves space for top USP)"
+      },
+      "Booking.com": {
+        "listing_id": 4570182.0,
+        "listing_url": "https://www.booking.com/hotel/in/villa-arcadia.html",
+        "current_title": "StayVista's Villa Arcadia - Candolim - 3BHK with Pet Friendly & Alfresco Dining",
+        "current_length": 79,
+        "suggested_title": "Arcadia Villa by StayVista - 3BHK w/ Pool",
+        "suggested_length": 41,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 79/50 chars (truncated in search cards)"
+      },
+      "MakeMyTrip": {
+        "listing_id": 1000268914.0,
+        "listing_url": "https://www.makemytrip.com/hotels/hotel-details/?hotelId=201909121124584427&_uCurrency=INR&checkin=11252025&checkout=11262025&city=CTAGR&country=IN&funnelType=getaway&lat=27.16779&lng=78.04893&locusId=ZNDEL67F7E280&locusType=zone&rank=1&roomStayQualifier=2e0e&seekSummaryRequired=false&viewType=LUXE&mtkeys=defaultMtkey",
+        "current_title": "StayVista |3 BHK Pool Villa Arcadia",
+        "current_length": 35,
+        "suggested_title": "3BHK Arcadia Villa \u2022 Pool \u2022 Goa",
+        "suggested_length": 31,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Removed non-compliant/cluttered characters ('|', '@', '+')"
+      }
+    }
+  },
+  {
+    "sv_id": 220,
+    "brand_name": "Meer",
+    "bhk": 6,
+    "property_type": "Villa",
+    "city": "Nashik",
+    "usps": [
+      "Pool",
+      "Lake View",
+      "Lawn"
+    ],
+    "otas": {
+      "Agoda": {
+        "listing_id": 10572650.0,
+        "listing_url": "https://www.agoda.com/en-in/5bhk-lake-view-pool-villa-near-sula-wine-tour/hotel/nasik-in.html",
+        "current_title": "StayVista at Villa Meer",
+        "current_length": 23,
+        "suggested_title": "6-Bedroom Meer Villa, Nashik w/ Pool",
+        "suggested_length": 36,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Structured into clean standard formula: Size + Name + USP + Location"
+      },
+      "Airbnb": {
+        "listing_id": 36398399.0,
+        "listing_url": "https://www.airbnb.co.in/rooms/36398399",
+        "current_title": "6BHK-Villa Meer-w/pool & Huge Lawn-Nashik",
+        "current_length": 41,
+        "suggested_title": "6BHK Meer \u2022 Pool & Lake View",
+        "suggested_length": 28,
+        "limit": 44,
+        "status": "ready_to_sync",
+        "change_rationale": "Structured into clean standard formula: Size + Name + USP + Location"
+      },
+      "Booking.com": {
+        "listing_id": 4074462.0,
+        "listing_url": "https://www.booking.com/hotel/in/casa-gris-nashik.html",
+        "current_title": "StayVista's Villa Meer - 6BHK with Pet Friendly & Lake View",
+        "current_length": 59,
+        "suggested_title": "Meer Villa by StayVista - 6BHK w/ Pool",
+        "suggested_length": 38,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 59/50 chars (truncated in search cards)"
+      },
+      "MakeMyTrip": {
+        "listing_id": 1000225580.0,
+        "listing_url": "https://www.makemytrip.com/hotels/hotel-details/?hotelId=201901091551135950&_uCurrency=INR&checkin=11252025&checkout=11262025&city=CTAGR&country=IN&funnelType=getaway&lat=27.16779&lng=78.04893&locusId=ZNDEL67F7E280&locusType=zone&rank=1&roomStayQualifier=2e0e&seekSummaryRequired=false&viewType=LUXE&mtkeys=defaultMtkey",
+        "current_title": "StayVista | Villa Meer",
+        "current_length": 22,
+        "suggested_title": "6BHK Meer Villa \u2022 Pool \u2022 Nashik",
+        "suggested_length": 31,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Removed non-compliant/cluttered characters ('|', '@', '+'); Added prominent BHK prefix for domestic filter matching"
+      }
+    }
+  },
+  {
+    "sv_id": 256,
+    "brand_name": "La Bougainvillea Heritage Home",
+    "bhk": 5,
+    "property_type": "Villa",
+    "city": "Goa",
+    "usps": [
+      "Private Pool"
+    ],
+    "otas": {
+      "Agoda": {
+        "listing_id": 10603203.0,
+        "listing_url": "https://www.agoda.com/en-in/la-bougainvillea/hotel/south-goa-in.html",
+        "current_title": "StayVista at La Bougainvillea Heritage Home",
+        "current_length": 43,
+        "suggested_title": "5-Bedroom Villa in Goa w/ Private Pool",
+        "suggested_length": 38,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Structured into clean standard formula: Size + Name + USP + Location"
+      },
+      "Airbnb": {
+        "listing_id": "549631663649644951",
+        "listing_url": "https://www.airbnb.co.in/rooms/549631663649644951",
+        "current_title": "StayVista at La Bougainvillea | Heritage Home",
+        "current_length": 45,
+        "suggested_title": "5BHK Villa w/ Private Pool",
+        "suggested_length": 26,
+        "limit": 44,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 45/44 chars (truncated in search cards); Removed non-compliant/cluttered characters ('|', '@', '+'); Removed redundant brand name on Airbnb (saves space for top USP)"
+      },
+      "Booking.com": {
+        "listing_id": 4281333.0,
+        "listing_url": "https://www.booking.com/hotel/in/la-bougainvillea.html",
+        "current_title": "StayVista's La Bougainvillea - Heritage Home - 5BHK Villa with Private Pool & Bathtub",
+        "current_length": 85,
+        "suggested_title": "La Bougainvillea Heritage Home by StayVista - 5BHK",
+        "suggested_length": 50,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 85/50 chars (truncated in search cards)"
+      },
+      "MakeMyTrip": {
+        "listing_id": 1000226588.0,
+        "listing_url": "https://www.makemytrip.com/hotels/hotel-details/?hotelId=201901101503358355&_uCurrency=INR&checkin=11252025&checkout=11262025&city=CTAGR&country=IN&funnelType=getaway&lat=27.16779&lng=78.04893&locusId=ZNDEL67F7E280&locusType=zone&rank=1&roomStayQualifier=2e0e&seekSummaryRequired=false&viewType=LUXE&mtkeys=defaultMtkey",
+        "current_title": "StayVista at La Bougainvillea Heritage Home",
+        "current_length": 43,
+        "suggested_title": "5BHK Villa \u2022 Private Pool \u2022 Goa",
+        "suggested_length": 31,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Added prominent BHK prefix for domestic filter matching"
+      }
+    }
+  },
+  {
+    "sv_id": 242,
+    "brand_name": "Cascades",
+    "bhk": 3,
+    "property_type": "Villa",
+    "city": "Lonavala",
+    "usps": [
+      "Pool",
+      "Mountain View",
+      "Lawn"
+    ],
+    "otas": {
+      "Agoda": {
+        "listing_id": 10603206.0,
+        "listing_url": "https://www.agoda.com/en-in/cascades-by-vista-rooms/hotel/malavli-in.html",
+        "current_title": "Cascades by Vista Rooms",
+        "current_length": 23,
+        "suggested_title": "3-Bedroom Cascades Villa, Lonavala w/ Pool",
+        "suggested_length": 42,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Structured into clean standard formula: Size + Name + USP + Location"
+      },
+      "Airbnb": {
+        "listing_id": "1421515422003188762",
+        "listing_url": "https://www.airbnb.co.in/rooms/1421515422003188762",
+        "current_title": "3R+Pvt Pool+Lawn+StayVista Cascades@Lonavala",
+        "current_length": 44,
+        "suggested_title": "3BHK Cascades \u2022 Pool & Mountain View",
+        "suggested_length": 36,
+        "limit": 44,
+        "status": "ready_to_sync",
+        "change_rationale": "Removed non-compliant/cluttered characters ('|', '@', '+'); Removed redundant brand name on Airbnb (saves space for top USP)"
+      },
+      "Booking.com": {
+        "listing_id": 4163961.0,
+        "listing_url": "https://www.booking.com/hotel/in/cascades-by-vista-rooms.html",
+        "current_title": "Cascades Villa by VEO, StayVista - 3BHK with Pet Friendly & Mountain View",
+        "current_length": 73,
+        "suggested_title": "Cascades Villa by StayVista - 3BHK w/ Pool",
+        "suggested_length": 42,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 73/50 chars (truncated in search cards)"
+      },
+      "MakeMyTrip": {
+        "listing_id": 1000225376.0,
+        "listing_url": "https://www.makemytrip.com/hotels/hotel-details/?hotelId=201901071709535563&_uCurrency=INR&checkin=11252025&checkout=11262025&city=CTAGR&country=IN&funnelType=getaway&lat=27.16779&lng=78.04893&locusId=ZNDEL67F7E280&locusType=zone&rank=1&roomStayQualifier=2e0e&seekSummaryRequired=false&viewType=LUXE&mtkeys=defaultMtkey",
+        "current_title": "StayVista | Cascades 3 BHK Pool Villa",
+        "current_length": 37,
+        "suggested_title": "3BHK Cascades Villa \u2022 Pool \u2022 Lonavala",
+        "suggested_length": 37,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Removed non-compliant/cluttered characters ('|', '@', '+')"
+      }
+    }
+  },
+  {
+    "sv_id": 222,
+    "brand_name": "Greenwoods  5",
+    "bhk": 5,
+    "property_type": "Villa",
+    "city": "Lonavala",
+    "usps": [
+      "Private Pool",
+      "Lawn"
+    ],
+    "otas": {
+      "Agoda": {
+        "listing_id": 10603209.0,
+        "listing_url": "https://www.agoda.com/en-in/5bhk-greenwoods-with-pvt-pool-tt-table-games-h10603209/hotel/lonavala-in.html",
+        "current_title": "StayVista at Greenwoods Villa 5",
+        "current_length": 31,
+        "suggested_title": "5-Bedroom Greenwoods  5 Villa in Lonavala",
+        "suggested_length": 41,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Structured into clean standard formula: Size + Name + USP + Location"
+      },
+      "Airbnb": {
+        "listing_id": "1559185170074047399",
+        "listing_url": "https://www.airbnb.co.in/rooms/1559185170074047399",
+        "current_title": "5BR|Lawn+Pool|StayVista|Greenwoods Villa 5@Lonavla",
+        "current_length": 50,
+        "suggested_title": "5BHK Greenwoods  5 \u2022 Private Pool & Lawn",
+        "suggested_length": 40,
+        "limit": 44,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 50/44 chars (truncated in search cards); Removed non-compliant/cluttered characters ('|', '@', '+'); Removed redundant brand name on Airbnb (saves space for top USP)"
+      },
+      "Booking.com": {
+        "listing_id": 4078235.0,
+        "listing_url": "https://www.booking.com/hotel/in/greenwoods-villa-5.html",
+        "current_title": "StayVista's Greenwoods Villa 5 - City-Center Villa with Private Pool, Terrace, Lift & Music System",
+        "current_length": 98,
+        "suggested_title": "Greenwoods  5 Villa - 5BHK with Private Pool",
+        "suggested_length": 44,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 98/50 chars (truncated in search cards)"
+      },
+      "MakeMyTrip": {
+        "listing_id": 1000225609.0,
+        "listing_url": "https://www.makemytrip.com/hotels/hotel-details/?hotelId=201901091559067780&_uCurrency=INR&checkin=11252025&checkout=11262025&city=CTAGR&country=IN&funnelType=getaway&lat=27.16779&lng=78.04893&locusId=ZNDEL67F7E280&locusType=zone&rank=1&roomStayQualifier=2e0e&seekSummaryRequired=false&viewType=LUXE&mtkeys=defaultMtkey",
+        "current_title": "StayVista | Greenwoods Five 5 BHK Villa",
+        "current_length": 39,
+        "suggested_title": "5BHK Greenwoods  5 Villa \u2022 Private Pool \u2022 Lonavala",
+        "suggested_length": 50,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Removed non-compliant/cluttered characters ('|', '@', '+')"
+      }
+    }
+  },
+  {
+    "sv_id": 282,
+    "brand_name": "The Kathguni",
+    "bhk": 3,
+    "property_type": "Villa",
+    "city": "Manali",
+    "usps": [
+      "Lawn"
+    ],
+    "otas": {
+      "Agoda": {
+        "listing_id": 10681434.0,
+        "listing_url": "https://www.agoda.com/en-in/the-kathguni-house-by-vista-rooms/hotel/manali-in.html",
+        "current_title": "StayVista at The Kathguni House",
+        "current_length": 31,
+        "suggested_title": "3-Bedroom The Kathguni Villa, Manali w/ Lawn",
+        "suggested_length": 44,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Structured into clean standard formula: Size + Name + USP + Location"
+      },
+      "Airbnb": {
+        "listing_id": 31177522.0,
+        "listing_url": "https://www.airbnb.co.in/rooms/31177522",
+        "current_title": "The Kathguni House | 3BHK Luxury Cottage with Lawn",
+        "current_length": 50,
+        "suggested_title": "3BHK The Kathguni Villa w/ Lawn",
+        "suggested_length": 31,
+        "limit": 44,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 50/44 chars (truncated in search cards); Removed non-compliant/cluttered characters ('|', '@', '+')"
+      },
+      "Booking.com": {
+        "listing_id": 4451398.0,
+        "listing_url": "https://www.booking.com/hotel/in/the-kathguni-house-by-vista-rooms.html",
+        "current_title": "The Kathguni House by StayVista - Luxury Cottage with Lawn",
+        "current_length": 58,
+        "suggested_title": "The Kathguni Villa by StayVista - 3BHK w/ Lawn",
+        "suggested_length": 46,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 58/50 chars (truncated in search cards)"
+      },
+      "MakeMyTrip": {
+        "listing_id": 1000237134.0,
+        "listing_url": "https://www.makemytrip.com/hotels/hotel-details/?hotelId=201903221217588326&_uCurrency=INR&checkin=11252025&checkout=11262025&city=CTAGR&country=IN&funnelType=getaway&lat=27.16779&lng=78.04893&locusId=ZNDEL67F7E280&locusType=zone&rank=1&roomStayQualifier=2e0e&seekSummaryRequired=false&viewType=LUXE&mtkeys=defaultMtkey",
+        "current_title": "StayVista | Kathguni House 3 BHK Villa",
+        "current_length": 38,
+        "suggested_title": "3BHK The Kathguni Villa \u2022 Lawn \u2022 Manali",
+        "suggested_length": 39,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Removed non-compliant/cluttered characters ('|', '@', '+')"
+      }
+    }
+  },
+  {
+    "sv_id": 317,
+    "brand_name": "Shubmann",
+    "bhk": 3,
+    "property_type": "Villa",
+    "city": "Wada",
+    "usps": [
+      "Private Pool",
+      "River View"
+    ],
+    "otas": {
+      "Agoda": {
+        "listing_id": 10682109.0,
+        "listing_url": "https://www.agoda.com/en-in/shubmann-by-vista-rooms/hotel/mumbai-in.html",
+        "current_title": "StayVista at Shubmann Villa with Pvt Pool & River View",
+        "current_length": 54,
+        "suggested_title": "3-Bedroom Shubmann Villa, Wada w/ Private Pool",
+        "suggested_length": 46,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 54/50 chars (truncated in search cards)"
+      },
+      "Airbnb": {
+        "listing_id": 32174190.0,
+        "listing_url": "https://www.airbnb.co.in/rooms/32174190",
+        "current_title": "StayVista at Shubmann Villa w / River View - Wada",
+        "current_length": 49,
+        "suggested_title": "3BHK Shubmann \u2022 Private Pool & River View",
+        "suggested_length": 41,
+        "limit": 44,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 49/44 chars (truncated in search cards); Removed redundant brand name on Airbnb (saves space for top USP)"
+      },
+      "Booking.com": {
+        "listing_id": 4618881.0,
+        "listing_url": "https://www.booking.com/hotel/in/shumann-by-vista-rooms-wada.html",
+        "current_title": "StayVista's Shubmann Villa - Wada - 3BHK with River View & Private Pool",
+        "current_length": 71,
+        "suggested_title": "Shubmann Villa by StayVista - 3BHK w/ Private Pool",
+        "suggested_length": 50,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 71/50 chars (truncated in search cards)"
+      },
+      "MakeMyTrip": {
+        "listing_id": 1000247830.0,
+        "listing_url": "https://www.makemytrip.com/hotels/hotel-details/?hotelId=201905211619441589&_uCurrency=INR&checkin=11252025&checkout=11262025&city=CTAGR&country=IN&funnelType=getaway&lat=27.16779&lng=78.04893&locusId=ZNDEL67F7E280&locusType=zone&rank=1&roomStayQualifier=2e0e&seekSummaryRequired=false&viewType=LUXE&mtkeys=defaultMtkey",
+        "current_title": "StayVista | Shubmann 3 BHK Villa",
+        "current_length": 32,
+        "suggested_title": "3BHK Shubmann Villa \u2022 Private Pool \u2022 Wada",
+        "suggested_length": 41,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Removed non-compliant/cluttered characters ('|', '@', '+')"
+      }
+    }
+  },
+  {
+    "sv_id": 373,
+    "brand_name": "The Hideout Farms",
+    "bhk": 2,
+    "property_type": "Villa",
+    "city": "India",
+    "usps": [
+      "Pool"
+    ],
+    "otas": {
+      "Agoda": {
+        "listing_id": 10688834.0,
+        "listing_url": "https://www.agoda.com/the-hideout-by-vista-rooms/hotel/kharar-in.html",
+        "current_title": "StayVista at The Hideout Farms - Kurukshetra",
+        "current_length": 44,
+        "suggested_title": "2-Bedroom The Hideout Farms Villa, India w/ Pool",
+        "suggested_length": 48,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Structured into clean standard formula: Size + Name + USP + Location"
+      },
+      "Airbnb": {
+        "listing_id": 33502735.0,
+        "listing_url": "https://www.airbnb.co.in/rooms/33502735",
+        "current_title": "StayVista at The Hideout Farms | 2BR Pool Villa",
+        "current_length": 47,
+        "suggested_title": "2BHK The Hideout Farms Villa w/ Pool",
+        "suggested_length": 36,
+        "limit": 44,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 47/44 chars (truncated in search cards); Removed non-compliant/cluttered characters ('|', '@', '+'); Removed redundant brand name on Airbnb (saves space for top USP)"
+      },
+      "Booking.com": {
+        "listing_id": 4838206.0,
+        "listing_url": "https://www.booking.com/hotel/in/hideout-by-vista-rooms.html",
+        "current_title": "The Hideout Farms - Kurukshetra by StayVista - 2BHK Villa with Swimming Pool & Farm Experience",
+        "current_length": 94,
+        "suggested_title": "The Hideout Farms Villa - 2BHK with Pool",
+        "suggested_length": 40,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 94/50 chars (truncated in search cards)"
+      },
+      "MakeMyTrip": {
+        "listing_id": 1000254219.0,
+        "listing_url": "https://www.makemytrip.com/hotels/hotel-details/?hotelId=201906281703073304&_uCurrency=INR&checkin=11252025&checkout=11262025&city=CTAGR&country=IN&funnelType=getaway&lat=27.16779&lng=78.04893&locusId=ZNDEL67F7E280&locusType=zone&rank=1&roomStayQualifier=2e0e&seekSummaryRequired=false&viewType=LUXE&mtkeys=defaultMtkey",
+        "current_title": "StayVista at The Hideout Farm",
+        "current_length": 29,
+        "suggested_title": "2BHK The Hideout Farms Villa \u2022 Pool \u2022 India",
+        "suggested_length": 43,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Added prominent BHK prefix for domestic filter matching"
+      }
+    }
+  },
+  {
+    "sv_id": 432,
+    "brand_name": "Padam Hill",
+    "bhk": 3,
+    "property_type": "Villa",
+    "city": "Kasauli",
+    "usps": [
+      "Bonfire"
+    ],
+    "otas": {
+      "Agoda": {
+        "listing_id": 10688835.0,
+        "listing_url": "https://www.agoda.com/en-in/padam-hill-by-vista-rooms/hotel/kasauli-in.html",
+        "current_title": "StayVista at Padam Hill",
+        "current_length": 23,
+        "suggested_title": "3-Bedroom Padam Hill Villa, Kasauli w/ Bonfire",
+        "suggested_length": 46,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Structured into clean standard formula: Size + Name + USP + Location"
+      },
+      "Airbnb": {
+        "listing_id": "661373608736527784",
+        "listing_url": "https://www.airbnb.co.in/rooms/661373608736527784",
+        "current_title": "3bhk Heritage Villa in Kasauli w/ Bonfire",
+        "current_length": 41,
+        "suggested_title": "3BHK Padam Hill Villa w/ Bonfire",
+        "suggested_length": 32,
+        "limit": 44,
+        "status": "ready_to_sync",
+        "change_rationale": "Structured into clean standard formula: Size + Name + USP + Location"
+      },
+      "Booking.com": {
+        "listing_id": 5040096.0,
+        "listing_url": "https://www.booking.com/hotel/in/padam-hill-by-vista-rooms.html",
+        "current_title": "StayVista's Padam Hill - 3BHK Pet-Friendly Mountain-View Villa",
+        "current_length": 62,
+        "suggested_title": "Padam Hill Villa by StayVista - 3BHK w/ Bonfire",
+        "suggested_length": 47,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 62/50 chars (truncated in search cards)"
+      },
+      "MakeMyTrip": {
+        "listing_id": 1000254216.0,
+        "listing_url": "https://www.makemytrip.com/hotels/hotel-details/?hotelId=201906281930462472&_uCurrency=INR&checkin=11252025&checkout=11262025&city=CTAGR&country=IN&funnelType=getaway&lat=27.16779&lng=78.04893&locusId=ZNDEL67F7E280&locusType=zone&rank=1&roomStayQualifier=2e0e&seekSummaryRequired=false&viewType=LUXE&mtkeys=defaultMtkey",
+        "current_title": "StayVista at Padam Hill",
+        "current_length": 23,
+        "suggested_title": "3BHK Padam Hill Villa \u2022 Bonfire \u2022 Kasauli",
+        "suggested_length": 41,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Added prominent BHK prefix for domestic filter matching"
+      }
+    }
+  },
+  {
+    "sv_id": 187,
+    "brand_name": "Gram's at Shivom, Pawna Lake by",
+    "bhk": 3,
+    "property_type": "Villa",
+    "city": "Lonavala",
+    "usps": [
+      "Pool",
+      "Lawn"
+    ],
+    "otas": {
+      "Agoda": {
+        "listing_id": 10688853.0,
+        "listing_url": "https://www.agoda.com/shivom-villa-3-by-vista-rooms/hotel/lonavala-in.html",
+        "current_title": "Gram's at Shivom, Pawna Lake by StayVista",
+        "current_length": 41,
+        "suggested_title": "3-Bedroom Villa in Lonavala w/ Pool",
+        "suggested_length": 35,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Structured into clean standard formula: Size + Name + USP + Location"
+      },
+      "Airbnb": {
+        "listing_id": "1365044094877344085",
+        "listing_url": "https://www.airbnb.co.in/rooms/1365044094877344085",
+        "current_title": "Gram's at Shivom, Pawna Lake by StayVista",
+        "current_length": 41,
+        "suggested_title": "3BHK Gram's at Shivom, Pawna Lake by w/ Pool",
+        "suggested_length": 44,
+        "limit": 44,
+        "status": "ready_to_sync",
+        "change_rationale": "Removed redundant brand name on Airbnb (saves space for top USP)"
+      },
+      "Booking.com": {
+        "listing_id": 3823702.0,
+        "listing_url": "https://www.booking.com/hotel/in/shivom-villa-8.html",
+        "current_title": "StayVista's Gram's at Shivom - Pawna - Shared Pool & Lawn",
+        "current_length": 57,
+        "suggested_title": "Gram's at Shivom, Pawna Lake by by StayVista - 3BH",
+        "suggested_length": 50,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 57/50 chars (truncated in search cards)"
+      },
+      "MakeMyTrip": {
+        "listing_id": 1000690955.0,
+        "listing_url": "https://www.makemytrip.com/hotels/hotel-details/?hotelId=202510081720513114&_uCurrency=INR&checkin=11252025&checkout=11262025&city=CTAGR&country=IN&funnelType=getaway&lat=27.16779&lng=78.04893&locusId=ZNDEL67F7E280&locusType=zone&rank=1&roomStayQualifier=2e0e&seekSummaryRequired=false&viewType=LUXE&mtkeys=defaultMtkey",
+        "current_title": "Gram's at Shivom, Pawna Lake by StayVista",
+        "current_length": 41,
+        "suggested_title": "3BHK Villa \u2022 Pool \u2022 Lonavala",
+        "suggested_length": 28,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Added prominent BHK prefix for domestic filter matching"
+      }
+    }
+  },
+  {
+    "sv_id": 473,
+    "brand_name": "The Owl  by VEO",
+    "bhk": 4,
+    "property_type": "House",
+    "city": "Jaipur",
+    "usps": [
+      "Lawn"
+    ],
+    "otas": {
+      "Agoda": {
+        "listing_id": 10691101.0,
+        "listing_url": "https://www.agoda.com/en-in/the-owl-house-by-vista-rooms/hotel/kalwad-kalan-and-khurd-in.html",
+        "current_title": "The Owl House by VEO - Part of StayVista",
+        "current_length": 40,
+        "suggested_title": "4-Bedroom The Owl  by VEO House, Jaipur w/ Lawn",
+        "suggested_length": 47,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Structured into clean standard formula: Size + Name + USP + Location"
+      },
+      "Airbnb": {
+        "listing_id": 35590446.0,
+        "listing_url": "https://www.airbnb.co.in/rooms/35590446",
+        "current_title": "4BR|Peaceful stay|StayVista| The Owl House @Jaipur",
+        "current_length": 50,
+        "suggested_title": "4BHK The Owl  by VEO House w/ Lawn",
+        "suggested_length": 34,
+        "limit": 44,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 50/44 chars (truncated in search cards); Removed non-compliant/cluttered characters ('|', '@', '+'); Removed redundant brand name on Airbnb (saves space for top USP)"
+      },
+      "Booking.com": {
+        "listing_id": 5199030.0,
+        "listing_url": "https://www.booking.com/hotel/in/the-owl-house-by-vista-rooms-jaipur.html",
+        "current_title": "The Owl House by VEO, StayVista - 4BHK with Pet Friendly & Terrace",
+        "current_length": 66,
+        "suggested_title": "The Owl  by VEO House by StayVista - 4BHK w/ Lawn",
+        "suggested_length": 49,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 66/50 chars (truncated in search cards)"
+      },
+      "MakeMyTrip": {
+        "listing_id": 1000269271.0,
+        "listing_url": "https://www.makemytrip.com/hotels/hotel-details/?hotelId=201909131841315734&_uCurrency=INR&checkin=11252025&checkout=11262025&city=CTAGR&country=IN&funnelType=getaway&lat=27.16779&lng=78.04893&locusId=ZNDEL67F7E280&locusType=zone&rank=1&roomStayQualifier=2e0e&seekSummaryRequired=false&viewType=LUXE&mtkeys=defaultMtkey",
+        "current_title": "The Owl House by VEO - Part of StayVista",
+        "current_length": 40,
+        "suggested_title": "4BHK The Owl  by VEO House \u2022 Lawn \u2022 Jaipur",
+        "suggested_length": 42,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Added prominent BHK prefix for domestic filter matching"
+      }
+    }
+  },
+  {
+    "sv_id": 308,
+    "brand_name": "Tall Silver",
+    "bhk": 2,
+    "property_type": "Villa",
+    "city": "Coorg",
+    "usps": [
+      "Infinity Pool"
+    ],
+    "otas": {
+      "Agoda": {
+        "listing_id": 10696433.0,
+        "listing_url": "https://www.agoda.com/en-in/tall-silver-by-vista-rooms-h10696433/hotel/coorg-in.html",
+        "current_title": "StayVista at Tall Silver",
+        "current_length": 24,
+        "suggested_title": "2-Bedroom Tall Silver Villa in Coorg",
+        "suggested_length": 36,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Structured into clean standard formula: Size + Name + USP + Location"
+      },
+      "Airbnb": {
+        "listing_id": 39589386.0,
+        "listing_url": "https://www.airbnb.co.in/rooms/39589386",
+        "current_title": "2BR| Pool+Brkfst |StayVista| Tall Silver@Karnataka",
+        "current_length": 50,
+        "suggested_title": "2BHK Tall Silver Villa w/ Infinity Pool",
+        "suggested_length": 39,
+        "limit": 44,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 50/44 chars (truncated in search cards); Removed non-compliant/cluttered characters ('|', '@', '+'); Removed redundant brand name on Airbnb (saves space for top USP)"
+      },
+      "Booking.com": {
+        "listing_id": 4587011.0,
+        "listing_url": "https://www.booking.com/hotel/in/tall-silver-by-vista-rooms.html",
+        "current_title": "StayVista's Tall Silver - 2BHK Forest-View Villa with Infinity Pool",
+        "current_length": 67,
+        "suggested_title": "Tall Silver Villa - 2BHK with Infinity Pool",
+        "suggested_length": 43,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 67/50 chars (truncated in search cards)"
+      },
+      "MakeMyTrip": {
+        "listing_id": 1000240463.0,
+        "listing_url": "https://www.makemytrip.com/hotels/hotel-details/?hotelId=201904051708438613&_uCurrency=INR&checkin=11252025&checkout=11262025&city=CTAGR&country=IN&funnelType=getaway&lat=27.16779&lng=78.04893&locusId=ZNDEL67F7E280&locusType=zone&rank=1&roomStayQualifier=2e0e&seekSummaryRequired=false&viewType=LUXE&mtkeys=defaultMtkey",
+        "current_title": "StayVista | Villa Tall Silver",
+        "current_length": 29,
+        "suggested_title": "2BHK Tall Silver Villa \u2022 Infinity Pool \u2022 Coorg",
+        "suggested_length": 46,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Removed non-compliant/cluttered characters ('|', '@', '+'); Added prominent BHK prefix for domestic filter matching"
+      }
+    }
+  },
+  {
+    "sv_id": 423,
+    "brand_name": "Mistletoe",
+    "bhk": 6,
+    "property_type": "House",
+    "city": "Nainital",
+    "usps": [
+      "Mountain View",
+      "Lawn",
+      "Bonfire"
+    ],
+    "otas": {
+      "Agoda": {
+        "listing_id": 10696439.0,
+        "listing_url": "https://www.agoda.com/en-in/mistletoe-house-by-vista-rooms-h10696439/hotel/nainital-in.html",
+        "current_title": "Mistletoe House by VEO - Part of StayVista",
+        "current_length": 42,
+        "suggested_title": "6-Bedroom Mistletoe House in Nainital",
+        "suggested_length": 37,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Structured into clean standard formula: Size + Name + USP + Location"
+      },
+      "Airbnb": {
+        "listing_id": "1734496875518022622",
+        "listing_url": "https://www.airbnb.co.in/rooms/1734496875518022622",
+        "current_title": "Bhimtal | 6BR Mistletoe House w/Cook, Wifi & Lawn",
+        "current_length": 49,
+        "suggested_title": "6BHK Mistletoe \u2022 Mountain View & Lawn",
+        "suggested_length": 37,
+        "limit": 44,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 49/44 chars (truncated in search cards); Removed non-compliant/cluttered characters ('|', '@', '+')"
+      },
+      "Booking.com": {
+        "listing_id": 2323060.0,
+        "listing_url": "https://www.booking.com/hotel/in/mistletoe-house.html",
+        "current_title": "Mistletoe House by VEO, StayVista - 6BHK with Mountain View & Bonfire",
+        "current_length": 69,
+        "suggested_title": "Mistletoe House - 6BHK with Mountain View",
+        "suggested_length": 41,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 69/50 chars (truncated in search cards)"
+      },
+      "MakeMyTrip": {
+        "listing_id": 1000254213.0,
+        "listing_url": "https://www.makemytrip.com/hotels/hotel-details/?hotelId=201906281929365708&_uCurrency=INR&checkin=11252025&checkout=11262025&city=CTAGR&country=IN&funnelType=getaway&lat=27.16779&lng=78.04893&locusId=ZNDEL67F7E280&locusType=zone&rank=1&roomStayQualifier=2e0e&seekSummaryRequired=false&viewType=LUXE&mtkeys=defaultMtkey",
+        "current_title": "StayVista | Mistletoe House",
+        "current_length": 27,
+        "suggested_title": "6BHK Mistletoe House \u2022 Mountain View \u2022 Nainital",
+        "suggested_length": 47,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Removed non-compliant/cluttered characters ('|', '@', '+'); Added prominent BHK prefix for domestic filter matching"
+      }
+    }
+  },
+  {
+    "sv_id": 451,
+    "brand_name": "The Lilly Ooty",
+    "bhk": 4,
+    "property_type": "Villa",
+    "city": "Ooty",
+    "usps": [
+      "Private Pool"
+    ],
+    "otas": {
+      "Agoda": {
+        "listing_id": 10696444.0,
+        "listing_url": "https://www.agoda.com/en-in/the-lilly-by-vista-rooms/hotel/ooty-in.html",
+        "current_title": "StayVista at The Lilly Ooty with Breakfast",
+        "current_length": 42,
+        "suggested_title": "4-Bedroom The Lilly Ooty Villa in Ooty",
+        "suggested_length": 38,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Structured into clean standard formula: Size + Name + USP + Location"
+      },
+      "Airbnb": {
+        "listing_id": 35206601.0,
+        "listing_url": "https://www.airbnb.co.in/rooms/35206601",
+        "current_title": "4BR|Majestic Views+Hill|StayVista| The Lilly @Ooty",
+        "current_length": 50,
+        "suggested_title": "4BHK The Lilly Ooty Villa w/ Private Pool",
+        "suggested_length": 41,
+        "limit": 44,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 50/44 chars (truncated in search cards); Removed non-compliant/cluttered characters ('|', '@', '+'); Removed redundant brand name on Airbnb (saves space for top USP)"
+      },
+      "Booking.com": {
+        "listing_id": 5121814.0,
+        "listing_url": "https://www.booking.com/hotel/in/the-lilly-by-vista-rooms.html",
+        "current_title": "The Lilly by StayVista - 4BHK Mountain-View Villa with Bar",
+        "current_length": 58,
+        "suggested_title": "The Lilly Ooty Villa - 4BHK with Private Pool",
+        "suggested_length": 45,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 58/50 chars (truncated in search cards)"
+      },
+      "MakeMyTrip": {
+        "listing_id": 1000254263.0,
+        "listing_url": "https://www.makemytrip.com/hotels/hotel-details/?hotelId=201906281847298425&_uCurrency=INR&checkin=11252025&checkout=11262025&city=CTAGR&country=IN&funnelType=getaway&lat=27.16779&lng=78.04893&locusId=ZNDEL67F7E280&locusType=zone&rank=1&roomStayQualifier=2e0e&seekSummaryRequired=false&viewType=LUXE&mtkeys=defaultMtkey",
+        "current_title": "StayVista | The Lilly 4 BHK Villa",
+        "current_length": 33,
+        "suggested_title": "4BHK The Lilly Ooty Villa \u2022 Private Pool \u2022 Ooty",
+        "suggested_length": 47,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Removed non-compliant/cluttered characters ('|', '@', '+')"
+      }
+    }
+  },
+  {
+    "sv_id": 357,
+    "brand_name": "in the Clouds",
+    "bhk": 3,
+    "property_type": "Cottage",
+    "city": "Mussoorie",
+    "usps": [
+      "Mountain View",
+      "BBQ"
+    ],
+    "otas": {
+      "Agoda": {
+        "listing_id": 10696458.0,
+        "listing_url": "https://www.agoda.com/en-in/cottage-in-the-clouds-by-vista-rooms/hotel/mussoorie-in.html",
+        "current_title": "StayVista at Cottage in the Clouds",
+        "current_length": 34,
+        "suggested_title": "3-Bedroom in the Clouds Cottage in Mussoorie",
+        "suggested_length": 44,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Structured into clean standard formula: Size + Name + USP + Location"
+      },
+      "Airbnb": {
+        "listing_id": "1734685855226959267",
+        "listing_url": "https://www.airbnb.co.in/rooms/1734685855226959267",
+        "current_title": "StayVista at Cottage In The Clouds",
+        "current_length": 34,
+        "suggested_title": "3BHK in the Clouds \u2022 Mountain View & BBQ",
+        "suggested_length": 40,
+        "limit": 44,
+        "status": "ready_to_sync",
+        "change_rationale": "Removed redundant brand name on Airbnb (saves space for top USP)"
+      },
+      "Booking.com": {
+        "listing_id": 4778863.0,
+        "listing_url": "https://www.booking.com/hotel/in/cottage-in-the-clouds-by-vista-rooms.html",
+        "current_title": "Cottage in the Clouds by StayVista - 3BHK with Mountain View & BBQ",
+        "current_length": 66,
+        "suggested_title": "in the Clouds Cottage - 3BHK with Mountain View",
+        "suggested_length": 47,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 66/50 chars (truncated in search cards)"
+      },
+      "MakeMyTrip": {
+        "listing_id": 1000254232.0,
+        "listing_url": "https://www.makemytrip.com/hotels/hotel-details/?hotelId=201907121635319157&_uCurrency=INR&checkin=11252025&checkout=11262025&city=CTAGR&country=IN&funnelType=getaway&lat=27.16779&lng=78.04893&locusId=ZNDEL67F7E280&locusType=zone&rank=1&roomStayQualifier=2e0e&seekSummaryRequired=false&viewType=LUXE&mtkeys=defaultMtkey",
+        "current_title": "StayVista at Cottage in the Clouds",
+        "current_length": 34,
+        "suggested_title": "3BHK in the Clouds \u2022 Mountain View \u2022 Mussoorie",
+        "suggested_length": 46,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Added prominent BHK prefix for domestic filter matching"
+      }
+    }
+  },
+  {
+    "sv_id": 691,
+    "brand_name": "Sullivan",
+    "bhk": 5,
+    "property_type": "Villa",
+    "city": "Ooty",
+    "usps": [
+      "Mountain View",
+      "BBQ"
+    ],
+    "otas": {
+      "Agoda": {
+        "listing_id": 10696483.0,
+        "listing_url": "https://www.agoda.com/en-in/villa-sullivan-by-vista-rooms/hotel/ooty-in.html",
+        "current_title": "Villa Sullivan by VEO - Part of StayVista",
+        "current_length": 41,
+        "suggested_title": "5-Bedroom Sullivan Villa, Ooty w/ Mountain View",
+        "suggested_length": 47,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Structured into clean standard formula: Size + Name + USP + Location"
+      },
+      "Airbnb": {
+        "listing_id": 39188162.0,
+        "listing_url": "https://www.airbnb.co.in/rooms/39188162",
+        "current_title": "5BR| Nature Escape |StayVista| Villa Sullivan@Ooty",
+        "current_length": 50,
+        "suggested_title": "5BHK Sullivan \u2022 Mountain View & BBQ",
+        "suggested_length": 35,
+        "limit": 44,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 50/44 chars (truncated in search cards); Removed non-compliant/cluttered characters ('|', '@', '+'); Removed redundant brand name on Airbnb (saves space for top USP)"
+      },
+      "Booking.com": {
+        "listing_id": 5680853.0,
+        "listing_url": "https://www.booking.com/hotel/in/villa-sullivan-by-vista-rooms-ooty.html",
+        "current_title": "Villa Sullivan by VEO, StayVista - 5BHK with Mountain View & BBQ",
+        "current_length": 64,
+        "suggested_title": "Sullivan Villa - 5BHK with Mountain View",
+        "suggested_length": 40,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 64/50 chars (truncated in search cards)"
+      },
+      "MakeMyTrip": {
+        "listing_id": 1000276266.0,
+        "listing_url": "https://www.makemytrip.com/hotels/hotel-details/?hotelId=201910191701271659&_uCurrency=INR&checkin=11252025&checkout=11262025&city=CTAGR&country=IN&funnelType=getaway&lat=27.16779&lng=78.04893&locusId=ZNDEL67F7E280&locusType=zone&rank=1&roomStayQualifier=2e0e&seekSummaryRequired=false&viewType=LUXE&mtkeys=defaultMtkey",
+        "current_title": "StayVista | Villa Sullivan",
+        "current_length": 26,
+        "suggested_title": "5BHK Sullivan Villa \u2022 Mountain View \u2022 Ooty",
+        "suggested_length": 42,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Removed non-compliant/cluttered characters ('|', '@', '+'); Added prominent BHK prefix for domestic filter matching"
+      }
+    }
+  },
+  {
+    "sv_id": 689,
+    "brand_name": "Agastya",
+    "bhk": 3,
+    "property_type": "Villa",
+    "city": "India",
+    "usps": [
+      "Mountain View"
+    ],
+    "otas": {
+      "Agoda": {
+        "listing_id": 10696488.0,
+        "listing_url": "https://www.agoda.com/en-in/boutique-homestay-in-heritage-town-of-badami/hotel/badami-in.html",
+        "current_title": "Agastya Villa by VEO - Part of StayVista",
+        "current_length": 40,
+        "suggested_title": "3-Bedroom Agastya Villa, India w/ Mountain View",
+        "suggested_length": 47,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Structured into clean standard formula: Size + Name + USP + Location"
+      },
+      "Airbnb": {
+        "listing_id": 39009540.0,
+        "listing_url": "https://www.airbnb.co.in/rooms/39009540",
+        "current_title": "3BR Pet Friendly Villa w/Terrace @Badami Bangalore",
+        "current_length": 50,
+        "suggested_title": "3BHK Agastya Villa w/ Mountain View",
+        "suggested_length": 35,
+        "limit": 44,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 50/44 chars (truncated in search cards); Removed non-compliant/cluttered characters ('|', '@', '+')"
+      },
+      "Booking.com": {
+        "listing_id": 5097411.0,
+        "listing_url": "https://www.booking.com/hotel/in/boutique-homestay-in-heritage-town-of-badami.html",
+        "current_title": "Agastya Villa by VEO, StayVista - 3BHK with Mountain View & Terrace",
+        "current_length": 67,
+        "suggested_title": "Agastya Villa by StayVista - 3BHK w/ Mountain View",
+        "suggested_length": 50,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 67/50 chars (truncated in search cards)"
+      },
+      "MakeMyTrip": {
+        "listing_id": 1000274645.0,
+        "listing_url": "https://www.makemytrip.com/hotels/hotel-details/?hotelId=201910151517104991&_uCurrency=INR&checkin=11252025&checkout=11262025&city=CTAGR&country=IN&funnelType=getaway&lat=27.16779&lng=78.04893&locusId=ZNDEL67F7E280&locusType=zone&rank=1&roomStayQualifier=2e0e&seekSummaryRequired=false&viewType=LUXE&mtkeys=defaultMtkey",
+        "current_title": "StayVista | Agastya Villa",
+        "current_length": 25,
+        "suggested_title": "3BHK Agastya Villa \u2022 Mountain View \u2022 India",
+        "suggested_length": 42,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Removed non-compliant/cluttered characters ('|', '@', '+'); Added prominent BHK prefix for domestic filter matching"
+      }
+    }
+  },
+  {
+    "sv_id": 475,
+    "brand_name": "Kinara The Luxury Collection",
+    "bhk": 4,
+    "property_type": "Villa",
+    "city": "Goa",
+    "usps": [
+      "Infinity Pool",
+      "Jacuzzi"
+    ],
+    "otas": {
+      "Agoda": {
+        "listing_id": 10696496.0,
+        "listing_url": "https://www.agoda.com/en-in/villa-kinara-by-vista-rooms/hotel/goa-in.html",
+        "current_title": "StayVista at Villa Kinara The Luxury Collection",
+        "current_length": 47,
+        "suggested_title": "4-Bedroom Villa in Goa w/ Infinity Pool",
+        "suggested_length": 39,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Structured into clean standard formula: Size + Name + USP + Location"
+      },
+      "Airbnb": {
+        "listing_id": "1562970641426659589",
+        "listing_url": "https://www.airbnb.co.in/rooms/1562970641426659589",
+        "current_title": "4BR|Luxury Pool Villa+Beach|StayVista| Kinara @Goa",
+        "current_length": 50,
+        "suggested_title": "4BHK Villa w/ Infinity Pool",
+        "suggested_length": 27,
+        "limit": 44,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 50/44 chars (truncated in search cards); Removed non-compliant/cluttered characters ('|', '@', '+'); Removed redundant brand name on Airbnb (saves space for top USP)"
+      },
+      "Booking.com": {
+        "listing_id": 5221919.0,
+        "listing_url": "https://www.booking.com/hotel/in/villa-kinara-by-vista-rooms.html",
+        "current_title": "Villa Kinara - Reis Magos by StayVista - 4BHK with Infinity Pool & Jacuzzi",
+        "current_length": 74,
+        "suggested_title": "Kinara The Luxury Collection by StayVista - 4BHK I",
+        "suggested_length": 50,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 74/50 chars (truncated in search cards)"
+      },
+      "MakeMyTrip": {
+        "listing_id": 1000255402.0,
+        "listing_url": "https://www.makemytrip.com/hotels/hotel-details/?hotelId=201907091201503554&_uCurrency=INR&checkin=11252025&checkout=11262025&city=CTAGR&country=IN&funnelType=getaway&lat=27.16779&lng=78.04893&locusId=ZNDEL67F7E280&locusType=zone&rank=1&roomStayQualifier=2e0e&seekSummaryRequired=false&viewType=LUXE&mtkeys=defaultMtkey",
+        "current_title": "StayVista | Villa Kinara",
+        "current_length": 24,
+        "suggested_title": "4BHK Villa \u2022 Infinity Pool \u2022 Goa",
+        "suggested_length": 32,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Removed non-compliant/cluttered characters ('|', '@', '+'); Added prominent BHK prefix for domestic filter matching"
+      }
+    }
+  },
+  {
+    "sv_id": 536,
+    "brand_name": "EL Lodge",
+    "bhk": 3,
+    "property_type": "Villa",
+    "city": "Lonavala",
+    "usps": [
+      "Private Pool"
+    ],
+    "otas": {
+      "Agoda": {
+        "listing_id": 10696559.0,
+        "listing_url": "https://www.agoda.com/en-in/el-lodge-by-vista-rooms/hotel/lonavala-in.html",
+        "current_title": "EL Lodge by StayVista - your perfect getaway",
+        "current_length": 44,
+        "suggested_title": "3-Bedroom EL Lodge Villa, Lonavala w/ Private Pool",
+        "suggested_length": 50,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Structured into clean standard formula: Size + Name + USP + Location"
+      },
+      "Airbnb": {
+        "listing_id": "656122526722052274",
+        "listing_url": "https://www.airbnb.co.in/rooms/656122526722052274",
+        "current_title": "3BR|Garden Pool|StayVista| El Lodge Villa@Lonavala",
+        "current_length": 50,
+        "suggested_title": "3BHK EL Lodge Villa w/ Private Pool",
+        "suggested_length": 35,
+        "limit": 44,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 50/44 chars (truncated in search cards); Removed non-compliant/cluttered characters ('|', '@', '+'); Removed redundant brand name on Airbnb (saves space for top USP)"
+      },
+      "Booking.com": {
+        "listing_id": 5323162.0,
+        "listing_url": "https://www.booking.com/hotel/in/el-lodge-by-vista-rooms.html",
+        "current_title": "EL Lodge by VEO, StayVista - 3BHK Villa with Alfresco Dining & Private Pool",
+        "current_length": 75,
+        "suggested_title": "EL Lodge Villa by StayVista - 3BHK w/ Private Pool",
+        "suggested_length": 50,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 75/50 chars (truncated in search cards)"
+      },
+      "MakeMyTrip": {
+        "listing_id": 1000265436.0,
+        "listing_url": "https://www.makemytrip.com/hotels/hotel-details/?hotelId=201908281754079648&_uCurrency=INR&checkin=11252025&checkout=11262025&city=CTAGR&country=IN&funnelType=getaway&lat=27.16779&lng=78.04893&locusId=ZNDEL67F7E280&locusType=zone&rank=1&roomStayQualifier=2e0e&seekSummaryRequired=false&viewType=LUXE&mtkeys=defaultMtkey",
+        "current_title": "StayVista | EL Lodge 3 BHK Pool Villa",
+        "current_length": 37,
+        "suggested_title": "3BHK EL Lodge Villa \u2022 Private Pool \u2022 Lonavala",
+        "suggested_length": 45,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Removed non-compliant/cluttered characters ('|', '@', '+')"
+      }
+    }
+  },
+  {
+    "sv_id": 435,
+    "brand_name": "Elevar",
+    "bhk": 5,
+    "property_type": "Villa",
+    "city": "Karjat",
+    "usps": [
+      "Plunge Pool",
+      "Mountain View"
+    ],
+    "otas": {
+      "Agoda": {
+        "listing_id": 10696563.0,
+        "listing_url": "https://www.agoda.com/en-in/elysium-villa-by-vista-rooms/hotel/karjat-in.html",
+        "current_title": "StayVista's Elevar Villa - Elevate your stay with a Mountain-View, Terrace & Plunge Pool",
+        "current_length": 88,
+        "suggested_title": "5-Bedroom Elevar Villa, Karjat w/ Plunge Pool",
+        "suggested_length": 45,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 88/50 chars (truncated in search cards)"
+      },
+      "Airbnb": {
+        "listing_id": "1294694749244221921",
+        "listing_url": "https://www.airbnb.co.in/rooms/1294694749244221921",
+        "current_title": "5BR Pvt Pool | StayVista Elevar Villa | Karjat Gem",
+        "current_length": 50,
+        "suggested_title": "5BHK Elevar \u2022 Plunge Pool & Mountain View",
+        "suggested_length": 41,
+        "limit": 44,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 50/44 chars (truncated in search cards); Removed non-compliant/cluttered characters ('|', '@', '+'); Removed redundant brand name on Airbnb (saves space for top USP)"
+      },
+      "Booking.com": {
+        "listing_id": 5210049.0,
+        "listing_url": "https://www.booking.com/hotel/in/elysium-villa-by-vista-rooms.html",
+        "current_title": "Elevar Villa by VEO, StayVista - 5BHK with Mountain View & Plunge Pool",
+        "current_length": 70,
+        "suggested_title": "Elevar Villa by StayVista - 5BHK w/ Plunge Pool",
+        "suggested_length": 47,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 70/50 chars (truncated in search cards)"
+      },
+      "MakeMyTrip": {
+        "listing_id": 1000256562.0,
+        "listing_url": "https://www.makemytrip.com/hotels/hotel-details/?hotelId=201907161704288821&_uCurrency=INR&checkin=11252025&checkout=11262025&city=CTAGR&country=IN&funnelType=getaway&lat=27.16779&lng=78.04893&locusId=ZNDEL67F7E280&locusType=zone&rank=1&roomStayQualifier=2e0e&seekSummaryRequired=false&viewType=LUXE&mtkeys=defaultMtkey",
+        "current_title": "StayVista | Elevar 5 BHK Pool Villa",
+        "current_length": 35,
+        "suggested_title": "5BHK Elevar Villa \u2022 Plunge Pool \u2022 Karjat",
+        "suggested_length": 40,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Removed non-compliant/cluttered characters ('|', '@', '+')"
+      }
+    }
+  },
+  {
+    "sv_id": 695,
+    "brand_name": "Maximus",
+    "bhk": 6,
+    "property_type": "Villa",
+    "city": "Lonavala",
+    "usps": [
+      "Pool",
+      "Gazebo"
+    ],
+    "otas": {
+      "Agoda": {
+        "listing_id": 10696565.0,
+        "listing_url": "https://www.agoda.com/en-in/stayvista-s-maximus-villa-city-center-villa-with-private-pool-gazebo-games-projector-room/hotel/lonavala-in.html",
+        "current_title": "StayVista at Maximus Villa",
+        "current_length": 26,
+        "suggested_title": "6-Bedroom Maximus Villa, Lonavala w/ Pool",
+        "suggested_length": 41,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Structured into clean standard formula: Size + Name + USP + Location"
+      },
+      "Airbnb": {
+        "listing_id": "656079073576721705",
+        "listing_url": "https://www.airbnb.co.in/rooms/656079073576721705",
+        "current_title": "6BR Maximus Villa Lonavala W/Pool",
+        "current_length": 33,
+        "suggested_title": "6BHK Maximus \u2022 Pool & Gazebo",
+        "suggested_length": 28,
+        "limit": 44,
+        "status": "ready_to_sync",
+        "change_rationale": "Structured into clean standard formula: Size + Name + USP + Location"
+      },
+      "Booking.com": {
+        "listing_id": 5645142.0,
+        "listing_url": "https://www.booking.com/hotel/in/kainya-villa-by-vista-rooms.html",
+        "current_title": "Maximus Villa by VEO, StayVista - 6BHK with Pool Table & Sauna",
+        "current_length": 62,
+        "suggested_title": "Maximus Villa by StayVista - 6BHK w/ Pool",
+        "suggested_length": 41,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 62/50 chars (truncated in search cards)"
+      },
+      "MakeMyTrip": {
+        "listing_id": 1000274620.0,
+        "listing_url": "https://www.makemytrip.com/hotels/hotel-details/?hotelId=201910111850106871&_uCurrency=INR&checkin=11252025&checkout=11262025&city=CTAGR&country=IN&funnelType=getaway&lat=27.16779&lng=78.04893&locusId=ZNDEL67F7E280&locusType=zone&rank=1&roomStayQualifier=2e0e&seekSummaryRequired=false&viewType=LUXE&mtkeys=defaultMtkey",
+        "current_title": "StayVista | Maximus Villa",
+        "current_length": 25,
+        "suggested_title": "6BHK Maximus Villa \u2022 Pool \u2022 Lonavala",
+        "suggested_length": 36,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Removed non-compliant/cluttered characters ('|', '@', '+'); Added prominent BHK prefix for domestic filter matching"
+      }
+    }
+  },
+  {
+    "sv_id": 318,
+    "brand_name": "Nivaant Farms",
+    "bhk": 17,
+    "property_type": "Villa",
+    "city": "India",
+    "usps": [
+      "Pool",
+      "Lawn"
+    ],
+    "otas": {
+      "Agoda": {
+        "listing_id": 10696566.0,
+        "listing_url": "https://www.agoda.com/en-in/nivaant-farms-by-vista-rooms/hotel/khopoli-in.html",
+        "current_title": "StayVista at Nivaant Farms",
+        "current_length": 26,
+        "suggested_title": "17-Bedroom Nivaant Farms Villa, India w/ Pool",
+        "suggested_length": 45,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Structured into clean standard formula: Size + Name + USP + Location"
+      },
+      "Airbnb": {
+        "listing_id": "1511993314533246186",
+        "listing_url": "https://www.airbnb.co.in/rooms/1511993314533246186",
+        "current_title": "9R+Pool+Lawn+Pickle Court-StayVista@Nivaant Farms.",
+        "current_length": 50,
+        "suggested_title": "17BHK Nivaant Farms \u2022 Pool & Lawn",
+        "suggested_length": 33,
+        "limit": 44,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 50/44 chars (truncated in search cards); Removed non-compliant/cluttered characters ('|', '@', '+'); Removed redundant brand name on Airbnb (saves space for top USP)"
+      },
+      "Booking.com": {
+        "listing_id": 4633039.0,
+        "listing_url": "https://www.booking.com/hotel/in/nivaant-farms-by-vista-rooms.html",
+        "current_title": "Nivaant Farms And Cottages by StayVista - 17BHK with Pet Friendly & Pickle Ball",
+        "current_length": 79,
+        "suggested_title": "Nivaant Farms Villa by StayVista - 17BHK w/ Pool",
+        "suggested_length": 48,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 79/50 chars (truncated in search cards)"
+      },
+      "MakeMyTrip": {
+        "listing_id": 1000256297.0,
+        "listing_url": "https://www.makemytrip.com/hotels/hotel-details/?hotelId=201907161201449124&_uCurrency=INR&checkin=11252025&checkout=11262025&city=CTAGR&country=IN&funnelType=getaway&lat=27.16779&lng=78.04893&locusId=ZNDEL67F7E280&locusType=zone&rank=1&roomStayQualifier=2e0e&seekSummaryRequired=false&viewType=LUXE&mtkeys=defaultMtkey",
+        "current_title": "StayVista at Nivaant Farms",
+        "current_length": 26,
+        "suggested_title": "17BHK Nivaant Farms Villa \u2022 Pool \u2022 India",
+        "suggested_length": 40,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Added prominent BHK prefix for domestic filter matching"
+      }
+    }
+  },
+  {
+    "sv_id": 260,
+    "brand_name": "The Verandah",
+    "bhk": 5,
+    "property_type": "Villa",
+    "city": "Bhimtal",
+    "usps": [
+      "Mountain View",
+      "BBQ"
+    ],
+    "otas": {
+      "Agoda": {
+        "listing_id": 10697501.0,
+        "listing_url": "https://www.agoda.com/en-in/the-verandah-by-vista-rooms/hotel/harnagar-jangalia-gaon-in.html",
+        "current_title": "StayVista at The Verandah",
+        "current_length": 25,
+        "suggested_title": "5-Bedroom The Verandah Villa in Bhimtal",
+        "suggested_length": 39,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Structured into clean standard formula: Size + Name + USP + Location"
+      },
+      "Airbnb": {
+        "listing_id": 8602984.0,
+        "listing_url": "https://www.airbnb.co.in/rooms/8602984",
+        "current_title": "5BR|Mountain View|StayVista| The Verandah @Bhimtal",
+        "current_length": 50,
+        "suggested_title": "5BHK The Verandah \u2022 Mountain View & BBQ",
+        "suggested_length": 39,
+        "limit": 44,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 50/44 chars (truncated in search cards); Removed non-compliant/cluttered characters ('|', '@', '+'); Removed redundant brand name on Airbnb (saves space for top USP)"
+      },
+      "Booking.com": {
+        "listing_id": 4332061.0,
+        "listing_url": "https://www.booking.com/hotel/in/the-verandah-by-vista-rooms.html",
+        "current_title": "The Verandah by StayVista - 5BHK Mountain-View Villa with BBQ",
+        "current_length": 61,
+        "suggested_title": "The Verandah Villa - 5BHK with Mountain View",
+        "suggested_length": 44,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 61/50 chars (truncated in search cards)"
+      },
+      "MakeMyTrip": {
+        "listing_id": 1000237108.0,
+        "listing_url": "https://www.makemytrip.com/hotels/hotel-details/?hotelId=201903191403037812&_uCurrency=INR&checkin=11252025&checkout=11262025&city=CTAGR&country=IN&funnelType=getaway&lat=27.16779&lng=78.04893&locusId=ZNDEL67F7E280&locusType=zone&rank=1&roomStayQualifier=2e0e&seekSummaryRequired=false&viewType=LUXE&mtkeys=defaultMtkey",
+        "current_title": "StayVista | The Verandah Villa",
+        "current_length": 30,
+        "suggested_title": "5BHK The Verandah Villa \u2022 Mountain View \u2022 Bhimtal",
+        "suggested_length": 49,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Removed non-compliant/cluttered characters ('|', '@', '+'); Added prominent BHK prefix for domestic filter matching"
+      }
+    }
+  },
+  {
+    "sv_id": 510,
+    "brand_name": "Casa Do Amor",
+    "bhk": 6,
+    "property_type": "Villa",
+    "city": "Goa",
+    "usps": [
+      "Private Pool",
+      "Lawn"
+    ],
+    "otas": {
+      "Agoda": {
+        "listing_id": 13632468.0,
+        "listing_url": "https://www.agoda.com/en-in/casa-do-amor-by-vista-rooms/hotel/goa-in.html",
+        "current_title": "Casa Do Amor with Pvt Pool by StayVista",
+        "current_length": 39,
+        "suggested_title": "6-Bedroom Casa Do Amor Villa, Goa w/ Private Pool",
+        "suggested_length": 49,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Structured into clean standard formula: Size + Name + USP + Location"
+      },
+      "Airbnb": {
+        "listing_id": "670685178529359163",
+        "listing_url": "https://www.airbnb.co.in/rooms/670685178529359163",
+        "current_title": "6BR Pool&Lawn StayVista Casa Do Amor Sangolda Goa!",
+        "current_length": 50,
+        "suggested_title": "6BHK Casa Do Amor \u2022 Private Pool & Lawn",
+        "suggested_length": 39,
+        "limit": 44,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 50/44 chars (truncated in search cards); Removed redundant brand name on Airbnb (saves space for top USP)"
+      },
+      "Booking.com": {
+        "listing_id": 5373516.0,
+        "listing_url": "https://www.booking.com/hotel/in/casa-do-amor-by-vista-rooms.html",
+        "current_title": "Casa Do Amor - Sangolda by VEO, StayVista - 6BHK Pet-Friendly Villa with Private Pool",
+        "current_length": 85,
+        "suggested_title": "Casa Do Amor Villa - 6BHK with Private Pool",
+        "suggested_length": 43,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 85/50 chars (truncated in search cards)"
+      },
+      "MakeMyTrip": {
+        "listing_id": 1000266130.0,
+        "listing_url": "https://www.makemytrip.com/hotels/hotel-details/?hotelId=201908311328127610&_uCurrency=INR&checkin=11252025&checkout=11262025&city=CTAGR&country=IN&funnelType=getaway&lat=27.16779&lng=78.04893&locusId=ZNDEL67F7E280&locusType=zone&rank=1&roomStayQualifier=2e0e&seekSummaryRequired=false&viewType=LUXE&mtkeys=defaultMtkey",
+        "current_title": "StayVista at Casa Do Amor",
+        "current_length": 25,
+        "suggested_title": "6BHK Casa Do Amor Villa \u2022 Private Pool \u2022 Goa",
+        "suggested_length": 44,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Added prominent BHK prefix for domestic filter matching"
+      }
+    }
+  },
+  {
+    "sv_id": 981,
+    "brand_name": "Casa Serenity",
+    "bhk": 4,
+    "property_type": "Villa",
+    "city": "Lonavala",
+    "usps": [
+      "Pool",
+      "Jacuzzi",
+      "Lawn"
+    ],
+    "otas": {
+      "Agoda": {
+        "listing_id": 13632702.0,
+        "listing_url": "https://www.agoda.com/en-in/casa-serenity-5br-in-lonavala-by-vista-rooms/hotel/lonavala-in.html",
+        "current_title": "Casa Serenity by StayVista - Relax with a pool, lawn, and inviting jacuzzi",
+        "current_length": 74,
+        "suggested_title": "4-Bedroom Casa Serenity Villa, Lonavala w/ Pool",
+        "suggested_length": 47,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 74/50 chars (truncated in search cards)"
+      },
+      "Airbnb": {
+        "listing_id": "655405122230151347",
+        "listing_url": "https://www.airbnb.co.in/rooms/655405122230151347",
+        "current_title": "4BHK Pool & Jacuzzi Villa | Casa Serenity Lonavala",
+        "current_length": 50,
+        "suggested_title": "4BHK Casa Serenity \u2022 Pool & Jacuzzi",
+        "suggested_length": 35,
+        "limit": 44,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 50/44 chars (truncated in search cards); Removed non-compliant/cluttered characters ('|', '@', '+')"
+      },
+      "Booking.com": {
+        "listing_id": 5928585.0,
+        "listing_url": "https://www.booking.com/hotel/in/sharma-villa-by-vista-rooms.html",
+        "current_title": "StayVista's Casa Serenity - 4BHK Pet-Friendly Villa with Jacuzzi",
+        "current_length": 64,
+        "suggested_title": "Casa Serenity Villa by StayVista - 4BHK w/ Pool",
+        "suggested_length": 47,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 64/50 chars (truncated in search cards)"
+      },
+      "MakeMyTrip": {
+        "listing_id": 1000296418.0,
+        "listing_url": "https://www.makemytrip.com/hotels/hotel-details/?hotelId=201912261134466732&_uCurrency=INR&checkin=11252025&checkout=11262025&city=CTAGR&country=IN&funnelType=getaway&lat=27.16779&lng=78.04893&locusId=ZNDEL67F7E280&locusType=zone&rank=1&roomStayQualifier=2e0e&seekSummaryRequired=false&viewType=LUXE&mtkeys=defaultMtkey",
+        "current_title": "StayVista | Casa Serenity 4 BHK Villa",
+        "current_length": 37,
+        "suggested_title": "4BHK Casa Serenity Villa \u2022 Pool \u2022 Lonavala",
+        "suggested_length": 42,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Removed non-compliant/cluttered characters ('|', '@', '+')"
+      }
+    }
+  },
+  {
+    "sv_id": 833,
+    "brand_name": "Serene Nook",
+    "bhk": 1,
+    "property_type": "Villa",
+    "city": "Wada",
+    "usps": [
+      "Jacuzzi"
+    ],
+    "otas": {
+      "Agoda": {
+        "listing_id": 13632724.0,
+        "listing_url": "https://www.agoda.com/sayoung-villa-by-vista-rooms/hotel/vikramgad-in.html",
+        "current_title": "StayVista's Serene Nook - Pet-Friendly Villa with Jacuzzi & Terrace",
+        "current_length": 67,
+        "suggested_title": "1-Bedroom Serene Nook Villa, Wada w/ Jacuzzi",
+        "suggested_length": 44,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 67/50 chars (truncated in search cards)"
+      },
+      "Airbnb": {
+        "listing_id": 40042182.0,
+        "listing_url": "https://www.airbnb.co.in/rooms/40042182",
+        "current_title": "1BR |Luxury Jacuzzi|StayVista| Serene Nook @Wada",
+        "current_length": 48,
+        "suggested_title": "1BHK Serene Nook Villa w/ Jacuzzi",
+        "suggested_length": 33,
+        "limit": 44,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 48/44 chars (truncated in search cards); Removed non-compliant/cluttered characters ('|', '@', '+'); Removed redundant brand name on Airbnb (saves space for top USP)"
+      },
+      "Booking.com": {
+        "listing_id": 5810698.0,
+        "listing_url": "https://www.booking.com/hotel/in/sayoung-villa-by-vista-rooms.html",
+        "current_title": "Serene Nook - Wada by VEO, StayVista - 1BHK Pet-Friendly Villa with Jacuzzi",
+        "current_length": 75,
+        "suggested_title": "Serene Nook Villa by StayVista - 1BHK w/ Jacuzzi",
+        "suggested_length": 48,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 75/50 chars (truncated in search cards)"
+      },
+      "MakeMyTrip": {
+        "listing_id": 1000288875.0,
+        "listing_url": "https://www.makemytrip.com/hotels/hotel-details/?hotelId=201911301503281337&_uCurrency=INR&checkin=11252025&checkout=11262025&city=CTAGR&country=IN&funnelType=getaway&lat=27.16779&lng=78.04893&locusId=ZNDEL67F7E280&locusType=zone&rank=1&roomStayQualifier=2e0e&seekSummaryRequired=false&viewType=LUXE&mtkeys=defaultMtkey",
+        "current_title": "StayVista | Serene Nook 1 BHK Villa",
+        "current_length": 35,
+        "suggested_title": "1BHK Serene Nook Villa \u2022 Jacuzzi \u2022 Wada",
+        "suggested_length": 39,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Removed non-compliant/cluttered characters ('|', '@', '+')"
+      }
+    }
+  },
+  {
+    "sv_id": 850,
+    "brand_name": "Misty Mountains",
+    "bhk": 2,
+    "property_type": "Villa",
+    "city": "Kasauli",
+    "usps": [
+      "Pool",
+      "Mountain View"
+    ],
+    "otas": {
+      "Agoda": {
+        "listing_id": 13753316.0,
+        "listing_url": "https://www.agoda.com/en-in/misty-mountains-cottage-by-vista-rooms/hotel/kasauli-in.html",
+        "current_title": "StayVista at Misty Mountains Cottage",
+        "current_length": 36,
+        "suggested_title": "2-Bedroom Misty Mountains Villa, Kasauli w/ Pool",
+        "suggested_length": 48,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Structured into clean standard formula: Size + Name + USP + Location"
+      },
+      "Airbnb": {
+        "listing_id": "1734474981679841350",
+        "listing_url": "https://www.airbnb.co.in/rooms/1734474981679841350",
+        "current_title": "StayVista at Misty Mountains Cottage-2BR Hill View",
+        "current_length": 50,
+        "suggested_title": "2BHK Misty Mountains \u2022 Pool & Mountain View",
+        "suggested_length": 43,
+        "limit": 44,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 50/44 chars (truncated in search cards); Removed redundant brand name on Airbnb (saves space for top USP)"
+      },
+      "Booking.com": {
+        "listing_id": 5845038.0,
+        "listing_url": "https://www.booking.com/hotel/in/hillcrest-villa-by-vistarooms.html",
+        "current_title": "StayVista's Misty Mountains Cottage - 2BHK with Mountain View & Pool Table",
+        "current_length": 74,
+        "suggested_title": "Misty Mountains Villa by StayVista - 2BHK w/ Pool",
+        "suggested_length": 49,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 74/50 chars (truncated in search cards)"
+      },
+      "MakeMyTrip": {
+        "listing_id": 1000297008.0,
+        "listing_url": "https://www.makemytrip.com/hotels/hotel-details/?hotelId=202001131110548702&_uCurrency=INR&checkin=11252025&checkout=11262025&city=CTAGR&country=IN&funnelType=getaway&lat=27.16779&lng=78.04893&locusId=ZNDEL67F7E280&locusType=zone&rank=1&roomStayQualifier=2e0e&seekSummaryRequired=false&viewType=LUXE&mtkeys=defaultMtkey",
+        "current_title": "StayVista | Misty Mountains 2 BHK Cottage",
+        "current_length": 41,
+        "suggested_title": "2BHK Misty Mountains Villa \u2022 Pool \u2022 Kasauli",
+        "suggested_length": 43,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Removed non-compliant/cluttered characters ('|', '@', '+')"
+      }
+    }
+  },
+  {
+    "sv_id": 902,
+    "brand_name": "Lake Trails",
+    "bhk": 2,
+    "property_type": "Villa",
+    "city": "Nainital",
+    "usps": [
+      "Valley View",
+      "Lake View",
+      "Bonfire"
+    ],
+    "otas": {
+      "Agoda": {
+        "listing_id": 13753396.0,
+        "listing_url": "https://www.agoda.com/singh-and-kapoor-s-villa-by-vista-rooms/hotel/nainital-in.html",
+        "current_title": "Lake Trails with Beautiful Valley View by StayVista",
+        "current_length": 51,
+        "suggested_title": "2-Bedroom Lake Trails Villa in Nainital",
+        "suggested_length": 39,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 51/50 chars (truncated in search cards)"
+      },
+      "Airbnb": {
+        "listing_id": "1527271590474527133",
+        "listing_url": "https://www.airbnb.co.in/rooms/1527271590474527133",
+        "current_title": "2BR @ Lake Trails w/Lake View, Cook, Wifi -Bhimtal",
+        "current_length": 50,
+        "suggested_title": "2BHK Lake Trails \u2022 Valley View & Lake View",
+        "suggested_length": 42,
+        "limit": 44,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 50/44 chars (truncated in search cards); Removed non-compliant/cluttered characters ('|', '@', '+')"
+      },
+      "Booking.com": {
+        "listing_id": 5881040.0,
+        "listing_url": "https://www.booking.com/hotel/in/singh-and-kapoors-villa-by-vista-rooms.html",
+        "current_title": "Lake Trails by VEO, StayVista - 2BHK Lake-View Villa with EV Station & Bonfire",
+        "current_length": 78,
+        "suggested_title": "Lake Trails Villa - 2BHK with Valley View",
+        "suggested_length": 41,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 78/50 chars (truncated in search cards)"
+      },
+      "MakeMyTrip": {
+        "listing_id": 1000293105.0,
+        "listing_url": "https://www.makemytrip.com/hotels/hotel-details/?hotelId=201912161130053844&_uCurrency=INR&checkin=11252025&checkout=11262025&city=CTAGR&country=IN&funnelType=getaway&lat=27.16779&lng=78.04893&locusId=ZNDEL67F7E280&locusType=zone&rank=1&roomStayQualifier=2e0e&seekSummaryRequired=false&viewType=LUXE&mtkeys=defaultMtkey",
+        "current_title": "StayVista at Lake Trails with Bonfire and Valley View",
+        "current_length": 53,
+        "suggested_title": "2BHK Lake Trails Villa \u2022 Valley View \u2022 Nainital",
+        "suggested_length": 47,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 53/50 chars (truncated in search cards); Added prominent BHK prefix for domestic filter matching"
+      }
+    }
+  },
+  {
+    "sv_id": 976,
+    "brand_name": "Woodside Meadows by VEO",
+    "bhk": 3,
+    "property_type": "Villa",
+    "city": "Shimla",
+    "usps": [
+      "Jacuzzi"
+    ],
+    "otas": {
+      "Agoda": {
+        "listing_id": 13753482.0,
+        "listing_url": "https://www.agoda.com/en-in/villa-woodside-meadows-by-veo-part-of-stayvista-h13753482/hotel/shimla-in.html",
+        "current_title": "Villa Woodside Meadows by VEO - Part of StayVista",
+        "current_length": 49,
+        "suggested_title": "3-Bedroom Woodside Meadows by VEO Villa in Shimla",
+        "suggested_length": 49,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Structured into clean standard formula: Size + Name + USP + Location"
+      },
+      "Airbnb": {
+        "listing_id": "664836870630358248",
+        "listing_url": "https://www.airbnb.co.in/rooms/664836870630358248",
+        "current_title": "3BR Woodside Meadows Hilltop Cabin with Jacuzzi",
+        "current_length": 47,
+        "suggested_title": "3BHK Woodside Meadows by VEO w/ Jacuzzi",
+        "suggested_length": 39,
+        "limit": 44,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 47/44 chars (truncated in search cards)"
+      },
+      "Booking.com": {
+        "listing_id": 5896663.0,
+        "listing_url": "https://www.booking.com/hotel/in/prem-ashray-by-vista-rooms.html",
+        "current_title": "Villa Woodside Meadows by VEO - Hilltop cabin with Jacuzzi, Kasauli",
+        "current_length": 67,
+        "suggested_title": "Woodside Meadows by VEO Villa - 3BHK with Jacuzzi",
+        "suggested_length": 49,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 67/50 chars (truncated in search cards)"
+      },
+      "MakeMyTrip": {
+        "listing_id": 1000295754.0,
+        "listing_url": "https://www.makemytrip.com/hotels/hotel-details/?hotelId=201912231255001694&_uCurrency=INR&checkin=11252025&checkout=11262025&city=CTAGR&country=IN&funnelType=getaway&lat=27.16779&lng=78.04893&locusId=ZNDEL67F7E280&locusType=zone&rank=1&roomStayQualifier=2e0e&seekSummaryRequired=false&viewType=LUXE&mtkeys=defaultMtkey",
+        "current_title": "Villa Woodside Meadows by VEO - Part of StayVista",
+        "current_length": 49,
+        "suggested_title": "3BHK Woodside Meadows by VEO \u2022 Jacuzzi \u2022 Shimla",
+        "suggested_length": 47,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Added prominent BHK prefix for domestic filter matching"
+      }
+    }
+  },
+  {
+    "sv_id": 1017,
+    "brand_name": "Davey's Townhouse by VEO",
+    "bhk": 3,
+    "property_type": "Villa",
+    "city": "India",
+    "usps": [
+      "Private Pool"
+    ],
+    "otas": {
+      "Agoda": {
+        "listing_id": 13754004.0,
+        "listing_url": "https://www.agoda.com/en-in/davey-s-townhouse/hotel/mysore-in.html",
+        "current_title": "Davey's Townhouse by VEO - Part of StayVista",
+        "current_length": 44,
+        "suggested_title": "3-Bedroom Davey's Townhouse by VEO Villa in India",
+        "suggested_length": 49,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Structured into clean standard formula: Size + Name + USP + Location"
+      },
+      "Airbnb": {
+        "listing_id": 40763389.0,
+        "listing_url": "https://www.airbnb.co.in/rooms/40763389",
+        "current_title": "3BR|PetStay+Bfast |StayVista Davey\u2019s House| Mysore",
+        "current_length": 50,
+        "suggested_title": "3BHK Villa w/ Private Pool",
+        "suggested_length": 26,
+        "limit": 44,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 50/44 chars (truncated in search cards); Removed non-compliant/cluttered characters ('|', '@', '+'); Removed redundant brand name on Airbnb (saves space for top USP)"
+      },
+      "Booking.com": {
+        "listing_id": 1514257.0,
+        "listing_url": "https://www.booking.com/hotel/in/davey-39-s-townhouse.html",
+        "current_title": "Davey's Townhouse by VEO, StayVista - 3BHK Pet-Friendly Villa with EV Station",
+        "current_length": 77,
+        "suggested_title": "Davey's Townhouse by VEO by StayVista - 3BHK Priva",
+        "suggested_length": 50,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 77/50 chars (truncated in search cards)"
+      },
+      "MakeMyTrip": {
+        "listing_id": 1000051660.0,
+        "listing_url": "https://www.makemytrip.com/hotels/hotel-details/?hotelId=201604291032455936&_uCurrency=INR&checkin=11252025&checkout=11262025&city=CTAGR&country=IN&funnelType=getaway&lat=27.16779&lng=78.04893&locusId=ZNDEL67F7E280&locusType=zone&rank=1&roomStayQualifier=2e0e&seekSummaryRequired=false&viewType=LUXE&mtkeys=defaultMtkey",
+        "current_title": "Davey's Townhouse by VEO - Part of StayVista",
+        "current_length": 44,
+        "suggested_title": "3BHK Villa \u2022 Private Pool \u2022 India",
+        "suggested_length": 33,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Added prominent BHK prefix for domestic filter matching"
+      }
+    }
+  },
+  {
+    "sv_id": 1140,
+    "brand_name": "Destine",
+    "bhk": 2,
+    "property_type": "Cottage",
+    "city": "Kasauli",
+    "usps": [
+      "Mountain View"
+    ],
+    "otas": {
+      "Agoda": {
+        "listing_id": 13759654.0,
+        "listing_url": "https://www.agoda.com/en-in/destine-cottage-2-br-w-forest-views-in-kasauli/hotel/sankri-in.html",
+        "current_title": "StayVista at Destine Cottage",
+        "current_length": 28,
+        "suggested_title": "2-Bedroom Destine Cottage in Kasauli",
+        "suggested_length": 36,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Structured into clean standard formula: Size + Name + USP + Location"
+      },
+      "Airbnb": {
+        "listing_id": "1446158152809596745",
+        "listing_url": "https://www.airbnb.co.in/rooms/1446158152809596745",
+        "current_title": "2BR|Forest View|StayVista| Destine Cottage@Kasauli",
+        "current_length": 50,
+        "suggested_title": "2BHK Destine Cottage w/ Mountain View",
+        "suggested_length": 37,
+        "limit": 44,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 50/44 chars (truncated in search cards); Removed non-compliant/cluttered characters ('|', '@', '+'); Removed redundant brand name on Airbnb (saves space for top USP)"
+      },
+      "Booking.com": {
+        "listing_id": 6023874.0,
+        "listing_url": "https://www.booking.com/hotel/in/destine-by-vista-rooms.html",
+        "current_title": "StayVista's Destine Cottage - 2BHK with Mountain View & Terrace",
+        "current_length": 63,
+        "suggested_title": "Destine Cottage - 2BHK with Mountain View",
+        "suggested_length": 41,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 63/50 chars (truncated in search cards)"
+      },
+      "MakeMyTrip": {
+        "listing_id": 1000824073.0,
+        "listing_url": "https://www.makemytrip.com/hotels/hotel-details/?hotelId=202607081631029235&_uCurrency=INR&checkin=11252025&checkout=11262025&city=CTAGR&country=IN&funnelType=getaway&lat=27.16779&lng=78.04893&locusId=ZNDEL67F7E280&locusType=zone&rank=1&roomStayQualifier=2e0e&seekSummaryRequired=false&viewType=LUXE&mtkeys=defaultMtkey",
+        "current_title": "StayVista at Destine Cottage",
+        "current_length": 28,
+        "suggested_title": "2BHK Destine Cottage \u2022 Mountain View \u2022 Kasauli",
+        "suggested_length": 46,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Added prominent BHK prefix for domestic filter matching"
+      }
+    }
+  },
+  {
+    "sv_id": 1194,
+    "brand_name": "Solitude in the Woods",
+    "bhk": 4,
+    "property_type": "Villa",
+    "city": "India",
+    "usps": [
+      "Pool",
+      "Orchard"
+    ],
+    "otas": {
+      "Agoda": {
+        "listing_id": 13778637.0,
+        "listing_url": "https://www.agoda.com/en-in/solitude-in-the-woods-by-vista-rooms/hotel/new-delhi-and-ncr-in.html",
+        "current_title": "StayVista at Solitude in the Woods",
+        "current_length": 34,
+        "suggested_title": "4-Bedroom Solitude in the Woods Villa in India",
+        "suggested_length": 46,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Structured into clean standard formula: Size + Name + USP + Location"
+      },
+      "Airbnb": {
+        "listing_id": 42052074.0,
+        "listing_url": "https://www.airbnb.co.in/rooms/42052074",
+        "current_title": "4BR | Solitude in Woods W/ Pool, Kids play area",
+        "current_length": 47,
+        "suggested_title": "4BHK Solitude in the Woods \u2022 Pool & Orchard",
+        "suggested_length": 43,
+        "limit": 44,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 47/44 chars (truncated in search cards); Removed non-compliant/cluttered characters ('|', '@', '+')"
+      },
+      "Booking.com": {
+        "listing_id": 6186427.0,
+        "listing_url": "https://www.booking.com/hotel/in/solitude-in-the-woods-by-vista-rooms.html",
+        "current_title": "Solitude in the Woods by StayVista - Pet Friendly & Orchard",
+        "current_length": 59,
+        "suggested_title": "Solitude in the Woods Villa - 4BHK with Pool",
+        "suggested_length": 44,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 59/50 chars (truncated in search cards)"
+      },
+      "MakeMyTrip": {
+        "listing_id": 1000305195.0,
+        "listing_url": "https://www.makemytrip.com/hotels/hotel-details/?hotelId=202002131146429624&_uCurrency=INR&checkin=11252025&checkout=11262025&city=CTAGR&country=IN&funnelType=getaway&lat=27.16779&lng=78.04893&locusId=ZNDEL67F7E280&locusType=zone&rank=1&roomStayQualifier=2e0e&seekSummaryRequired=false&viewType=LUXE&mtkeys=defaultMtkey",
+        "current_title": "StayVista I Solitude in the Woods 2 BHK Villa",
+        "current_length": 45,
+        "suggested_title": "4BHK Solitude in the Woods Villa \u2022 Pool \u2022 India",
+        "suggested_length": 47,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Structured into clean standard formula: Size + Name + USP + Location"
+      }
+    }
+  },
+  {
+    "sv_id": 1196,
+    "brand_name": "Novera The Lake",
+    "bhk": 3,
+    "property_type": "Villa",
+    "city": "Wayanad",
+    "usps": [
+      "Gazebo"
+    ],
+    "otas": {
+      "Agoda": {
+        "listing_id": 13778893.0,
+        "listing_url": "https://www.agoda.com/en-in/novera-by-vista-rooms/hotel/tariyod-in.html",
+        "current_title": "StayVista at Novera The Lake Villa",
+        "current_length": 34,
+        "suggested_title": "3-Bedroom Novera The Lake Villa, Wayanad w/ Gazebo",
+        "suggested_length": 50,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Structured into clean standard formula: Size + Name + USP + Location"
+      },
+      "Airbnb": {
+        "listing_id": 42234446.0,
+        "listing_url": "https://www.airbnb.co.in/rooms/42234446",
+        "current_title": "3 BHK Luxury Villa w/Scenic View + BKFST @ Wayanad",
+        "current_length": 50,
+        "suggested_title": "3BHK Novera The Lake Villa w/ Gazebo",
+        "suggested_length": 36,
+        "limit": 44,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 50/44 chars (truncated in search cards); Removed non-compliant/cluttered characters ('|', '@', '+')"
+      },
+      "Booking.com": {
+        "listing_id": 6222913.0,
+        "listing_url": "https://www.booking.com/hotel/in/novera-by-vista-rooms.html",
+        "current_title": "StayVista's Novera - 3BHK Lake-View Villa with Gazebo",
+        "current_length": 53,
+        "suggested_title": "Novera The Lake Villa - 3BHK with Gazebo",
+        "suggested_length": 40,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 53/50 chars (truncated in search cards)"
+      },
+      "MakeMyTrip": {
+        "listing_id": 1000305856.0,
+        "listing_url": "https://www.makemytrip.com/hotels/hotel-details/?hotelId=202002151556328976&_uCurrency=INR&checkin=11252025&checkout=11262025&city=CTAGR&country=IN&funnelType=getaway&lat=27.16779&lng=78.04893&locusId=ZNDEL67F7E280&locusType=zone&rank=1&roomStayQualifier=2e0e&seekSummaryRequired=false&viewType=LUXE&mtkeys=defaultMtkey",
+        "current_title": "StayVista | Novera Villa",
+        "current_length": 24,
+        "suggested_title": "3BHK Novera The Lake Villa \u2022 Gazebo \u2022 Wayanad",
+        "suggested_length": 45,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Removed non-compliant/cluttered characters ('|', '@', '+'); Added prominent BHK prefix for domestic filter matching"
+      }
+    }
+  },
+  {
+    "sv_id": 722,
+    "brand_name": "Escape",
+    "bhk": 3,
+    "property_type": "Villa",
+    "city": "India",
+    "usps": [
+      "Mountain View",
+      "Orchard"
+    ],
+    "otas": {
+      "Agoda": {
+        "listing_id": 13801458.0,
+        "listing_url": "https://www.agoda.com/en-in/la-ipsing-farm-by-vista-rooms/hotel/rumtek-in.html",
+        "current_title": "La Ipsing Farm by StayVista, A heritage property in orchards with Mountain views, featuring Outdoor",
+        "current_length": 99,
+        "suggested_title": "3-Bedroom Escape Villa, India w/ Mountain View",
+        "suggested_length": 46,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 99/50 chars (truncated in search cards)"
+      },
+      "Airbnb": {
+        "listing_id": "673565147964147782",
+        "listing_url": "https://www.airbnb.co.in/rooms/673565147964147782",
+        "current_title": "3BHK Views+Outdoor Games|StayVista Escape@Samdong",
+        "current_length": 49,
+        "suggested_title": "3BHK Escape \u2022 Mountain View & Orchard",
+        "suggested_length": 37,
+        "limit": 44,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 49/44 chars (truncated in search cards); Removed non-compliant/cluttered characters ('|', '@', '+'); Removed redundant brand name on Airbnb (saves space for top USP)"
+      },
+      "Booking.com": {
+        "listing_id": 5732933.0,
+        "listing_url": "https://www.booking.com/hotel/in/la-lpsing-farm-by-vista-rooms.html",
+        "current_title": "La Ipsing Farm by StayVista - 3 BHK Villa with Balcony, Mountain View, Indoor Games, and Pet Friendly",
+        "current_length": 101,
+        "suggested_title": "Escape Villa by StayVista - 3BHK w/ Mountain View",
+        "suggested_length": 49,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 101/50 chars (truncated in search cards)"
+      },
+      "MakeMyTrip": {
+        "listing_id": 1000277247.0,
+        "listing_url": "https://www.makemytrip.com/hotels/hotel-details/?hotelId=201910231733437120&_uCurrency=INR&checkin=11252025&checkout=11262025&city=CTAGR&country=IN&funnelType=getaway&lat=27.16779&lng=78.04893&locusId=ZNDEL67F7E280&locusType=zone&rank=1&roomStayQualifier=2e0e&seekSummaryRequired=false&viewType=LUXE&mtkeys=defaultMtkey",
+        "current_title": "StayVista | La Ipsing Farm 3 BHK Villa",
+        "current_length": 38,
+        "suggested_title": "3BHK Escape Villa \u2022 Mountain View \u2022 India",
+        "suggested_length": 41,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Removed non-compliant/cluttered characters ('|', '@', '+')"
+      }
+    }
+  },
+  {
+    "sv_id": 687,
+    "brand_name": "PleasantVille",
+    "bhk": 4,
+    "property_type": "Villa",
+    "city": "India",
+    "usps": [
+      "Lawn"
+    ],
+    "otas": {
+      "Agoda": {
+        "listing_id": 13801667.0,
+        "listing_url": "https://www.agoda.com/en-in/pleasantville-by-vista-rooms/hotel/nahan-in.html",
+        "current_title": "StayVista at PleasantVille with Huge Lawn Area",
+        "current_length": 46,
+        "suggested_title": "4-Bedroom PleasantVille Villa, India w/ Lawn",
+        "suggested_length": 44,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Structured into clean standard formula: Size + Name + USP + Location"
+      },
+      "Airbnb": {
+        "listing_id": 39454414.0,
+        "listing_url": "https://www.airbnb.co.in/rooms/39454414",
+        "current_title": "4BR |Mountain Escape|StayVista| PleasantVille @HP",
+        "current_length": 49,
+        "suggested_title": "4BHK PleasantVille Villa w/ Lawn",
+        "suggested_length": 32,
+        "limit": 44,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 49/44 chars (truncated in search cards); Removed non-compliant/cluttered characters ('|', '@', '+'); Removed redundant brand name on Airbnb (saves space for top USP)"
+      },
+      "Booking.com": {
+        "listing_id": 5633106.0,
+        "listing_url": "https://www.booking.com/hotel/in/pleasant-villa-by-vista-rooms.html",
+        "current_title": "PleasantVille - Nahan by VEO, StayVista - 4BHK Mountain-View Villa with Pet Friendly",
+        "current_length": 84,
+        "suggested_title": "PleasantVille Villa by StayVista - 4BHK w/ Lawn",
+        "suggested_length": 47,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Fixed length overflow: was 84/50 chars (truncated in search cards)"
+      },
+      "MakeMyTrip": {
+        "listing_id": 1000274633.0,
+        "listing_url": "https://www.makemytrip.com/hotels/hotel-details/?hotelId=201910181802126496&_uCurrency=INR&checkin=11252025&checkout=11262025&city=CTAGR&country=IN&funnelType=getaway&lat=27.16779&lng=78.04893&locusId=ZNDEL67F7E280&locusType=zone&rank=1&roomStayQualifier=2e0e&seekSummaryRequired=false&viewType=LUXE&mtkeys=defaultMtkey",
+        "current_title": "StayVista | PleasantVille 4 BHK Villa",
+        "current_length": 37,
+        "suggested_title": "4BHK PleasantVille Villa \u2022 Lawn \u2022 India",
+        "suggested_length": 39,
+        "limit": 50,
+        "status": "ready_to_sync",
+        "change_rationale": "Removed non-compliant/cluttered characters ('|', '@', '+')"
+      }
+    }
+  }
+]

@@ -16,7 +16,8 @@
  */
 
 import http from 'node:http';
-import { spawn } from 'node:child_process';
+import { spawn, execFile } from 'node:child_process';
+import { promisify } from 'node:util';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -112,6 +113,87 @@ const server = http.createServer(async (req, res) => {
       const started = Date.now();
       const result = await analyze(body.data || {});
       return sendJson(res, result.ok ? 200 : 200, { ...result, elapsedMs: Date.now() - started });
+    }
+
+    /* ---------------------------------------------------- batch generator ---- */
+
+    if (url.pathname === '/api/batch/run') {
+      if (req.method !== 'POST') return sendJson(res, 405, { ok: false, error: 'Use POST.' });
+      const execPromise = promisify(execFile);
+      try {
+        const scriptPath = path.join(here, 'scripts', 'batch_generator.py');
+        const { stdout } = await execPromise('python3', [scriptPath]);
+        let parsed = null;
+        try {
+          parsed = JSON.parse(stdout.trim());
+        } catch {
+          const lines = stdout.trim().split('\n');
+          for (let i = lines.length - 1; i >= 0; i--) {
+            try {
+              parsed = JSON.parse(lines[i]);
+              break;
+            } catch {}
+          }
+        }
+        if (!parsed) {
+          const historyPath = path.join(here, 'data', 'runs_history.json');
+          if (fs.existsSync(historyPath)) {
+            const history = JSON.parse(fs.readFileSync(historyPath, 'utf-8'));
+            parsed = history[history.length - 1];
+          }
+        }
+        return sendJson(res, 200, { ok: true, run: parsed });
+      } catch (err) {
+        return sendJson(res, 500, { ok: false, error: 'Batch run failed.', detail: String(err && err.message) });
+      }
+    }
+
+    if (url.pathname === '/api/batch/status') {
+      const historyPath = path.join(here, 'data', 'runs_history.json');
+      let history = [];
+      if (fs.existsSync(historyPath)) {
+        try {
+          history = JSON.parse(fs.readFileSync(historyPath, 'utf-8'));
+        } catch {}
+      }
+      const latest = history.length ? history[history.length - 1] : null;
+      return sendJson(res, 200, { ok: true, totalRuns: history.length, latest, history });
+    }
+
+    if (url.pathname === '/api/batch/download') {
+      const runId = url.searchParams.get('run_id');
+      const otaParam = (url.searchParams.get('ota') || '').trim();
+      
+      let filename = runId ? `OTA_Name_Suggestions_${runId}.xlsx` : 'OTA_Name_Suggestions_Latest.xlsx';
+      if (otaParam && otaParam.toLowerCase() !== 'all') {
+        const otaLower = otaParam.toLowerCase();
+        const otaMap = {
+          'airbnb': 'Airbnb',
+          'booking': 'Booking.com',
+          'booking.com': 'Booking.com',
+          'makemytrip': 'MakeMyTrip',
+          'agoda': 'Agoda',
+        };
+        const platName = otaMap[otaLower] || otaParam;
+        const platSlug = platName.replace(/\s+/g, '_');
+        const candidateFile = runId
+          ? `OTA_Name_Suggestions_${runId}_${platSlug}.xlsx`
+          : `OTA_Name_Suggestions_Latest_${platSlug}.xlsx`;
+        if (fs.existsSync(path.join(here, 'output', candidateFile))) {
+          filename = candidateFile;
+        }
+      }
+
+      const filePath = path.join(here, 'output', filename);
+      if (!fs.existsSync(filePath)) {
+        return sendJson(res, 404, { ok: false, error: 'Excel file not found. Run the batch generator first.' });
+      }
+      res.writeHead(200, {
+        'Content-Type': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+        'Content-Disposition': `attachment; filename="${filename}"`,
+        'Cache-Control': 'no-store',
+      });
+      return fs.createReadStream(filePath).pipe(res);
     }
 
     if (req.method === 'GET' || req.method === 'HEAD') {

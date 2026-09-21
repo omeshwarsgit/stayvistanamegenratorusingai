@@ -10,7 +10,8 @@
   "scripts": {
     "start": "node server.js",
     "dev": "node --watch server.js",
-    "test": "node test/run-tests.js && node test/extraction-tests.js"
+    "test": "node test/run-tests.js && node test/extraction-tests.js",
+    "batch": "python3 scripts/batch_generator.py"
   },
   "optionalDependencies": {
     "@anthropic-ai/sdk": "^0.70.0"

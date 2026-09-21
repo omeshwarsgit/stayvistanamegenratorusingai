@@ -17,6 +17,7 @@ const state = {
   capturePoll: null,
   result: null,
   busy: false,
+  selectedOta: 'all',
 };
 
 const OTA_PATTERNS = [
@@ -65,6 +66,87 @@ function init() {
   });
   document.addEventListener('click', onCopyClick);
   loadStatus();
+  setupBatchControls();
+  setupOtaFilter();
+}
+
+function setupOtaFilter() {
+  const select = $('otaFilterSelect');
+  if (!select) return;
+  select.addEventListener('change', () => {
+    state.selectedOta = select.value || 'all';
+    if (state.result) {
+      renderOtaCards(state.result);
+    }
+  });
+}
+
+function setupBatchControls() {
+  const runBtn = $('runBatchBtn');
+  const badge = $('batchRunBadge');
+  const msg = $('batchStatusMessage');
+  if (!runBtn) return;
+
+  const otaSelect = $('batchOtaSelect');
+  const downloadBtn = $('downloadBatchBtn');
+  const downloadBtnLabel = $('downloadBtnLabel');
+
+  function updateDownloadUrl() {
+    if (!otaSelect || !downloadBtn) return;
+    const val = otaSelect.value || 'all';
+    downloadBtn.href = `/api/batch/download?ota=${encodeURIComponent(val)}`;
+    if (downloadBtnLabel) {
+      if (val === 'all') {
+        downloadBtnLabel.textContent = 'Download All OTAs (.xlsx)';
+      } else {
+        downloadBtnLabel.textContent = `Download ${val} (.xlsx)`;
+      }
+    }
+  }
+
+  if (otaSelect) {
+    otaSelect.addEventListener('change', updateDownloadUrl);
+    updateDownloadUrl();
+  }
+
+  async function checkBatchStatus() {
+    try {
+      const res = await fetch('/api/batch/status');
+      const data = await res.json();
+      if (data.ok && data.latest) {
+        badge.textContent = `Latest: ${data.latest.run_id}`;
+        badge.title = `${data.totalRuns} total runs. Last ran at ${data.latest.timestamp}`;
+      }
+    } catch {}
+  }
+
+  runBtn.addEventListener('click', async () => {
+    runBtn.disabled = true;
+    runBtn.textContent = 'Generating...';
+    msg.style.display = 'block';
+    msg.style.color = '#4338ca';
+    msg.textContent = 'Running 50-property batch name generator across all OTAs...';
+    try {
+      const res = await fetch('/api/batch/run', { method: 'POST' });
+      const data = await res.json();
+      if (data.ok && data.run) {
+        badge.textContent = `Latest: ${data.run.run_id}`;
+        msg.textContent = `Successfully completed ${data.run.run_id}! Generated ${data.run.total_records} titles across 50 properties (${data.run.overflows_fixed} overflows fixed). Download updated!`;
+        msg.style.color = '#047857';
+      } else {
+        msg.textContent = `Error: ${data.error || 'Batch run failed.'}`;
+        msg.style.color = '#b91c1c';
+      }
+    } catch (err) {
+      msg.textContent = `Error: ${err.message}`;
+      msg.style.color = '#b91c1c';
+    } finally {
+      runBtn.disabled = false;
+      runBtn.textContent = 'Run 50-Property Batch';
+    }
+  });
+
+  checkBatchStatus();
 }
 
 async function loadStatus() {
@@ -170,9 +252,53 @@ const OTA_GLYPHS = {
 };
 
 function renderOtaCards(data) {
-  const cards = data.otaNames || [];
-  $('otaSection').hidden = cards.length === 0;
-  $('otaCards').innerHTML = cards.map((c) => `
+  const allCards = data.otaNames || [];
+  $('otaSection').hidden = allCards.length === 0;
+  if (allCards.length === 0) return;
+
+  const select = $('otaFilterSelect');
+  if (select && state.selectedOta) {
+    select.value = state.selectedOta;
+  }
+
+  const selected = state.selectedOta || 'all';
+  const filteredCards = selected === 'all'
+    ? allCards
+    : allCards.filter((c) => (c.ota || '').toLowerCase() === selected.toLowerCase());
+
+  const statusEl = $('otaFilterStatus');
+  if (statusEl) {
+    if (selected !== 'all') {
+      const selectedOption = select ? select.selectedOptions[0] : null;
+      const selectedLabel = selectedOption ? selectedOption.textContent : selected;
+      statusEl.hidden = false;
+      statusEl.innerHTML = `
+        <span>Showing title for <b>${esc(selectedLabel)}</b> only</span>
+        <button class="chip-reset" id="resetOtaFilterBtn" type="button">Show All OTAs (${allCards.length})</button>
+      `;
+      const resetBtn = $('resetOtaFilterBtn');
+      if (resetBtn) {
+        resetBtn.addEventListener('click', () => {
+          state.selectedOta = 'all';
+          if (select) select.value = 'all';
+          renderOtaCards(data);
+        });
+      }
+    } else {
+      statusEl.hidden = true;
+      statusEl.innerHTML = '';
+    }
+  }
+
+  if (filteredCards.length === 0) {
+    $('otaCards').innerHTML = `
+      <div class="ota-card missing" style="grid-column: 1 / -1; padding: 24px; text-align: center;">
+        <p style="margin: 0; color: var(--ink-70);">No generated title found for the selected platform.</p>
+      </div>`;
+    return;
+  }
+
+  $('otaCards').innerHTML = filteredCards.map((c) => `
     <div class="ota-card${c.name ? '' : ' missing'}">
       <span class="ota-mark ${esc(c.accent)}" aria-hidden="true">
         <svg viewBox="0 0 24 24" fill="currentColor">${OTA_GLYPHS[c.glyph] || OTA_GLYPHS.home}</svg>
