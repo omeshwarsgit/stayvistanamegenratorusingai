@@ -115,25 +115,133 @@ const server = http.createServer(async (req, res) => {
       return sendJson(res, result.ok ? 200 : 200, { ...result, elapsedMs: Date.now() - started });
     }
 
+const MAX_UPLOAD_BODY = 50_000_000;
+
     /* ---------------------------------------------------- batch generator ---- */
+
+    if (url.pathname === '/api/batch/upload-multiple') {
+      if (req.method !== 'POST') return sendJson(res, 405, { ok: false, error: 'Use POST.' });
+      const body = await readJsonBody(req, MAX_UPLOAD_BODY);
+      if (body.error) return sendJson(res, 400, { ok: false, error: body.error });
+      const files = (body.data && body.data.files) || [];
+      if (!Array.isArray(files) || files.length === 0) {
+        return sendJson(res, 400, { ok: false, error: 'No files provided.' });
+      }
+
+      const uploadsDir = path.join(here, 'uploads');
+      if (!fs.existsSync(uploadsDir)) fs.mkdirSync(uploadsDir, { recursive: true });
+
+      const savedPaths = [];
+      for (const f of files) {
+        if (!f.name || !f.data) continue;
+        const safeName = path.basename(f.name);
+        const targetPath = path.join(uploadsDir, safeName);
+        const buffer = Buffer.from(f.data, 'base64');
+        fs.writeFileSync(targetPath, buffer);
+        savedPaths.push(targetPath);
+      }
+
+      if (savedPaths.length === 0) {
+        return sendJson(res, 400, { ok: false, error: 'Failed to save uploaded files.' });
+      }
+
+      const execPromise = promisify(execFile);
+      try {
+        const scriptPath = path.join(here, 'scripts', 'file_processor.py');
+        const { stdout } = await execPromise('python3', [scriptPath, ...savedPaths]);
+        let parsed = null;
+        const firstBrace = stdout.indexOf('{');
+        const lastBrace = stdout.lastIndexOf('}');
+        if (firstBrace !== -1 && lastBrace > firstBrace) {
+          try {
+            parsed = JSON.parse(stdout.slice(firstBrace, lastBrace + 1));
+          } catch {}
+        }
+        if (!parsed) {
+          const historyPath = path.join(here, 'data', 'runs_history.json');
+          if (fs.existsSync(historyPath)) {
+            const history = JSON.parse(fs.readFileSync(historyPath, 'utf-8'));
+            parsed = history[history.length - 1];
+          }
+        }
+
+        const processedFiles = (parsed && parsed.processed_files) || [];
+        const downloadList = processedFiles.map((fp) => {
+          const bname = typeof fp === 'string'
+            ? path.basename(fp)
+            : (fp.output_name || path.basename(fp.output_path || ''));
+          const origName = (typeof fp === 'object' && fp.original_name) ? fp.original_name : bname;
+          return {
+            originalName: origName,
+            fileName: bname,
+            downloadUrl: `/api/batch/download-file?name=${encodeURIComponent(bname)}`,
+            recordCount: fp.record_count || 0,
+            overflowsFixed: fp.overflows_fixed || 0,
+            linksResolved: fp.links_resolved || 0,
+          };
+        });
+
+        const masterFile = parsed && parsed.master_xlsx ? path.basename(parsed.master_xlsx) : '';
+        const zipFile = parsed && parsed.zip_file ? path.basename(parsed.zip_file) : '';
+
+        return sendJson(res, 200, {
+          ok: true,
+          run: {
+            ...parsed,
+            run_id: parsed && parsed.run_id ? parsed.run_id : `UPLOAD_${parsed && parsed.timestamp ? parsed.timestamp : Date.now()}`,
+          },
+          downloadFiles: downloadList,
+          masterDownloadUrl: masterFile ? `/api/batch/download-file?name=${encodeURIComponent(masterFile)}` : `/api/batch/download?ota=all`,
+          zipDownloadUrl: zipFile ? `/api/batch/download-file?name=${encodeURIComponent(zipFile)}` : null,
+        });
+      } catch (err) {
+        console.error('Multi-file batch error:', err);
+        return sendJson(res, 500, { ok: false, error: 'Processing uploaded files failed.', detail: String(err && err.message) });
+      }
+    }
+
+    if (url.pathname === '/api/batch/download-file') {
+      const name = path.basename(url.searchParams.get('name') || '');
+      if (!name) return sendJson(res, 400, { ok: false, error: 'Filename is required.' });
+      const filePath = path.join(here, 'output', name);
+      if (!fs.existsSync(filePath)) {
+        return sendJson(res, 404, { ok: false, error: 'File not found.' });
+      }
+      const ext = path.extname(name).toLowerCase();
+      const contentType = ext === '.csv'
+        ? 'text/csv; charset=utf-8'
+        : ext === '.zip'
+          ? 'application/zip'
+          : 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet';
+      res.writeHead(200, {
+        'Content-Type': contentType,
+        'Content-Disposition': `attachment; filename="${name}"`,
+        'Cache-Control': 'no-store',
+      });
+      return fs.createReadStream(filePath).pipe(res);
+    }
 
     if (url.pathname === '/api/batch/run') {
       if (req.method !== 'POST') return sendJson(res, 405, { ok: false, error: 'Use POST.' });
+      const body = await readJsonBody(req);
+      const scope = (body.data && body.data.scope) || 'all4';
       const execPromise = promisify(execFile);
       try {
-        const scriptPath = path.join(here, 'scripts', 'batch_generator.py');
-        const { stdout } = await execPromise('python3', [scriptPath]);
+        const scriptPath = path.join(here, 'scripts', 'file_processor.py');
+        let inputArg = path.join(here, 'data', 'input_properties_all_4ota.xlsx');
+        if (scope === '50') {
+          inputArg = path.join(here, 'data', 'input_properties_batch_50.xlsx');
+        } else if (!fs.existsSync(inputArg)) {
+          await execPromise('python3', [path.join(here, 'scripts', 'create_input_batch.py'), '--scope=all4']);
+        }
+        const { stdout } = await execPromise('python3', [scriptPath, inputArg]);
         let parsed = null;
-        try {
-          parsed = JSON.parse(stdout.trim());
-        } catch {
-          const lines = stdout.trim().split('\n');
-          for (let i = lines.length - 1; i >= 0; i--) {
-            try {
-              parsed = JSON.parse(lines[i]);
-              break;
-            } catch {}
-          }
+        const firstBrace = stdout.indexOf('{');
+        const lastBrace = stdout.lastIndexOf('}');
+        if (firstBrace !== -1 && lastBrace > firstBrace) {
+          try {
+            parsed = JSON.parse(stdout.slice(firstBrace, lastBrace + 1));
+          } catch {}
         }
         if (!parsed) {
           const historyPath = path.join(here, 'data', 'runs_history.json');
@@ -164,36 +272,49 @@ const server = http.createServer(async (req, res) => {
       const runId = url.searchParams.get('run_id');
       const otaParam = (url.searchParams.get('ota') || '').trim();
       
-      let filename = runId ? `OTA_Name_Suggestions_${runId}.xlsx` : 'OTA_Name_Suggestions_Latest.xlsx';
+      const candidates = [];
       if (otaParam && otaParam.toLowerCase() !== 'all') {
         const otaLower = otaParam.toLowerCase();
         const otaMap = {
-          'airbnb': 'Airbnb',
-          'booking': 'Booking.com',
+          airbnb: 'Airbnb',
+          booking: 'Booking.com',
           'booking.com': 'Booking.com',
-          'makemytrip': 'MakeMyTrip',
-          'agoda': 'Agoda',
+          makemytrip: 'MakeMyTrip',
+          agoda: 'Agoda',
         };
         const platName = otaMap[otaLower] || otaParam;
         const platSlug = platName.replace(/\s+/g, '_');
-        const candidateFile = runId
-          ? `OTA_Name_Suggestions_${runId}_${platSlug}.xlsx`
-          : `OTA_Name_Suggestions_Latest_${platSlug}.xlsx`;
-        if (fs.existsSync(path.join(here, 'output', candidateFile))) {
-          filename = candidateFile;
+        if (runId) {
+          candidates.push(`OTA_Name_Suggestions_${runId}_${platSlug}.xlsx`);
+        }
+        candidates.push(`OTA_Name_Suggestions_Latest_${platSlug}.xlsx`);
+      } else {
+        if (runId) {
+          candidates.push(`OTA_Name_Suggestions_${runId}.xlsx`);
+          candidates.push(`OTA_Automation_Master_${runId}.xlsx`);
+          candidates.push(`Automation_Sync_Master_${runId.replace(/^RUN_/, '')}.xlsx`);
+        }
+        candidates.push('OTA_Name_Suggestions_Latest.xlsx');
+      }
+
+      let filename = null;
+      for (const cand of candidates) {
+        if (fs.existsSync(path.join(here, 'output', cand))) {
+          filename = cand;
+          break;
         }
       }
 
-      const filePath = path.join(here, 'output', filename);
-      if (!fs.existsSync(filePath)) {
+      if (!filename) {
         return sendJson(res, 404, { ok: false, error: 'Excel file not found. Run the batch generator first.' });
       }
+      const targetFile = path.join(here, 'output', filename);
       res.writeHead(200, {
         'Content-Type': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
         'Content-Disposition': `attachment; filename="${filename}"`,
         'Cache-Control': 'no-store',
       });
-      return fs.createReadStream(filePath).pipe(res);
+      return fs.createReadStream(targetFile).pipe(res);
     }
 
     if (req.method === 'GET' || req.method === 'HEAD') {
@@ -203,7 +324,9 @@ const server = http.createServer(async (req, res) => {
     return sendJson(res, 404, { error: 'Not found.' });
   } catch (err) {
     console.error('[error]', err);
-    return sendJson(res, 500, { ok: false, error: 'Something went wrong on the server.', detail: String(err && err.message) });
+    if (!res.headersSent) {
+      return sendJson(res, 500, { ok: false, error: 'Something went wrong on the server.', detail: String(err && err.message) });
+    }
   }
 });
 

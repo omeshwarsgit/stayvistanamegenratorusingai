@@ -138,5 +138,175 @@
     "total_records": 200,
     "overflows_fixed": 100,
     "status": "completed"
+  },
+  {
+    "run_id": "RUN_015",
+    "timestamp": "2026-09-21 15:30:28",
+    "input_file": "data/input_properties_batch_50.xlsx",
+    "output_file": "output/OTA_Name_Suggestions_RUN_015.xlsx",
+    "latest_file": "output/OTA_Name_Suggestions_Latest.xlsx",
+    "total_records": 200,
+    "overflows_fixed": 100,
+    "status": "completed"
+  },
+  {
+    "run_id": "RUN_016",
+    "timestamp": "2026-09-21 15:36:16",
+    "input_file": "data/input_properties_batch_50.xlsx",
+    "output_file": "output/OTA_Name_Suggestions_RUN_016.xlsx",
+    "latest_file": "output/OTA_Name_Suggestions_Latest.xlsx",
+    "total_records": 200,
+    "overflows_fixed": 100,
+    "status": "completed"
+  },
+  {
+    "run_id": "RUN_017",
+    "timestamp": "2026-09-22 10:16:36",
+    "input_file": "data/input_properties_batch_50.xlsx",
+    "output_file": "output/OTA_Name_Suggestions_RUN_017.xlsx",
+    "latest_file": "output/OTA_Name_Suggestions_Latest.xlsx",
+    "total_records": 200,
+    "overflows_fixed": 100,
+    "status": "completed"
+  },
+  {
+    "run_id": "RUN_018",
+    "timestamp": "2026-09-22 10:47:00",
+    "input_files": [
+      "data/input_properties_batch_50.xlsx"
+    ],
+    "processed_files": [
+      "/Users/omeshwarshukla/Downloads/OTA Name Generator  2/scripts/../output/input_properties_batch_50_updated.xlsx"
+    ],
+    "master_file": "/Users/omeshwarshukla/Downloads/OTA Name Generator  2/scripts/../output/OTA_Automation_Master_RUN_018.xlsx",
+    "latest_file": "/Users/omeshwarshukla/Downloads/OTA Name Generator  2/scripts/../output/OTA_Name_Suggestions_Latest.xlsx",
+    "total_records": 200,
+    "overflows_fixed": 100,
+    "links_resolved": 0,
+    "status": "completed"
+  },
+  {
+    "run_id": "RUN_019",
+    "timestamp": "2026-09-22 10:47:05",
+    "input_files": [
+      "data/input_properties_batch_50.csv",
+      "data/input_properties_batch_50.xlsx"
+    ],
+    "processed_files": [
+      "/Users/omeshwarshukla/Downloads/OTA Name Generator  2/scripts/../output/input_properties_batch_50_updated.csv",
+      "/Users/omeshwarshukla/Downloads/OTA Name Generator  2/scripts/../output/input_properties_batch_50_updated.xlsx"
+    ],
+    "master_file": "/Users/omeshwarshukla/Downloads/OTA Name Generator  2/scripts/../output/OTA_Automation_Master_RUN_019.xlsx",
+    "latest_file": "/Users/omeshwarshukla/Downloads/OTA Name Generator  2/scripts/../output/OTA_Name_Suggestions_Latest.xlsx",
+    "total_records": 400,
+    "overflows_fixed": 200,
+    "links_resolved": 0,
+    "status": "completed"
+  },
+  {
+    "run_id": "RUN_020",
+    "timestamp": "2026-09-22 10:47:46",
+    "input_files": [
+      "data/input_properties_all_4ota.xlsx"
+    ],
+    "processed_files": [
+      "/Users/omeshwarshukla/Downloads/OTA Name Generator  2/scripts/../output/input_properties_all_4ota_updated.xlsx"
+    ],
+    "master_file": "/Users/omeshwarshukla/Downloads/OTA Name Generator  2/scripts/../output/OTA_Automation_Master_RUN_020.xlsx",
+    "latest_file": "/Users/omeshwarshukla/Downloads/OTA Name Generator  2/scripts/../output/OTA_Name_Suggestions_Latest.xlsx",
+    "total_records": 2868,
+    "overflows_fixed": 1322,
+    "links_resolved": 0,
+    "status": "completed"
+  },
+  {
+    "run_id": "RUN_021",
+    "timestamp": "2026-09-22 10:50:26",
+    "input_file": "data/input_properties_all_4ota.xlsx",
+    "output_file": "output/OTA_Name_Suggestions_RUN_021.xlsx",
+    "latest_file": "output/OTA_Name_Suggestions_Latest.xlsx",
+    "total_records": 2868,
+    "overflows_fixed": 1322,
+    "status": "completed"
+  },
+  {
+    "run_id": "RUN_20260922_105122",
+    "timestamp": "2026-09-22 10:51:22",
+    "total_records": 200,
+    "overflows_fixed": 0,
+    "links_resolved": 0,
+    "status": "completed"
+  },
+  {
+    "run_id": "RUN_20260922_105140",
+    "timestamp": "2026-09-22 10:51:40",
+    "total_records": 200,
+    "overflows_fixed": 0,
+    "links_resolved": 0,
+    "status": "completed"
+  },
+  {
+    "run_id": "RUN_20260922_105153",
+    "timestamp": "2026-09-22 10:51:54",
+    "total_records": 200,
+    "overflows_fixed": 0,
+    "links_resolved": 0,
+    "status": "completed"
+  },
+  {
+    "run_id": "RUN_20260922_105308",
+    "timestamp": "2026-09-22 10:53:08",
+    "total_records": 200,
+    "overflows_fixed": 0,
+    "links_resolved": 0,
+    "status": "completed"
+  },
+  {
+    "run_id": "RUN_20260922_105428",
+    "timestamp": "2026-09-22 10:55:34",
+    "total_records": 33295,
+    "overflows_fixed": 15420,
+    "links_resolved": 960,
+    "status": "completed"
+  },
+  {
+    "run_id": "RUN_20260922_110231",
+    "timestamp": "2026-09-22 11:02:35",
+    "total_records": 2759,
+    "overflows_fixed": 1134,
+    "links_resolved": 192,
+    "status": "completed"
+  },
+  {
+    "run_id": "RUN_20260922_110240",
+    "timestamp": "2026-09-22 11:02:44",
+    "total_records": 2759,
+    "overflows_fixed": 1134,
+    "links_resolved": 192,
+    "status": "completed"
+  },
+  {
+    "run_id": "RUN_20260922_110253",
+    "timestamp": "2026-09-22 11:03:08",
+    "total_records": 6659,
+    "overflows_fixed": 3084,
+    "links_resolved": 192,
+    "status": "completed"
+  },
+  {
+    "run_id": "RUN_20260922_110630",
+    "timestamp": "2026-09-22 11:06:32",
+    "total_records": 1313,
+    "overflows_fixed": 72,
+    "links_resolved": 0,
+    "status": "completed"
+  },
+  {
+    "run_id": "RUN_20260922_113940",
+    "timestamp": "2026-09-22 11:39:43",
+    "total_records": 2587,
+    "overflows_fixed": 1878,
+    "links_resolved": 0,
+    "status": "completed"
   }
 ]
