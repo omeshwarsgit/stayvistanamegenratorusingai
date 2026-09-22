@@ -1,0 +1,12 @@
+node_modules
+.runtime
+.venv
+.git
+.gitignore
+*.log
+.DS_Store
+HOW-TO-RUN.txt
+START-MAC.command
+START-WINDOWS.bat
+uploads/*
+output/*

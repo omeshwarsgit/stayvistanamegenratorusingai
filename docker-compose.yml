@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  ota-name-generator:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ota-name-generator:latest
+    container_name: ota-name-generator
+    restart: always
+    ports:
+      - "5178:5178"
+    environment:
+      - PORT=5178
+      - HOST=0.0.0.0
+      - NODE_ENV=production
+      # - ANTHROPIC_API_KEY=your_key_here
+    volumes:
+      - ./data:/app/data
+      - ./output:/app/output
+      - ./uploads:/app/uploads
