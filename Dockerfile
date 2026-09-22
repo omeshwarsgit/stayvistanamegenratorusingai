@@ -1,5 +1,6 @@
 # ==============================================================================
 # Production Dockerfile — OTA Property Name Generator (Optimized for Railway/Cloud)
+# Build: v1.0.1 (Debian Bookworm)
 # ==============================================================================
 FROM node:20-bookworm-slim
 
