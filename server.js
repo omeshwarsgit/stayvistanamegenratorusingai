@@ -32,7 +32,7 @@ const here = path.dirname(fileURLToPath(import.meta.url));
 loadDotEnv(path.join(here, '.env'));
 
 const PORT = Number(process.env.PORT) || 5178;
-const HOST = process.env.HOST || process.env.OTA_HOST || '127.0.0.1';
+const HOST = process.env.HOST || process.env.OTA_HOST || (process.env.NODE_ENV === 'production' || process.env.RAILWAY_ENVIRONMENT ? '0.0.0.0' : '127.0.0.1');
 const PUBLIC_DIR = path.join(here, 'public');
 const MAX_BODY = 200_000;
 /** A captured page is bigger than an analyse request, but still bounded. */
@@ -450,3 +450,6 @@ function loadDotEnv(file) {
     if (value) process.env[key] = value;
   }
 }
+
+export default server;
+
