@@ -1,45 +1,35 @@
 # ==============================================================================
-# Production Dockerfile — OTA Property Name Generator
+# Production Dockerfile — OTA Property Name Generator (Optimized for Railway/Cloud)
 # ==============================================================================
-FROM node:20-bullseye-slim
+FROM node:20-bookworm-slim
 
-# Install Python 3, pip, and Chromium for headless rendering
+# Install Python 3 and native openpyxl for fast, reliable batch processing
 RUN apt-get update && apt-get install -y --no-install-recommends \
     python3 \
-    python3-pip \
-    chromium \
-    fonts-liberation \
+    python3-openpyxl \
     ca-certificates \
+    curl \
     && rm -rf /var/lib/apt/lists/*
 
-# Set up working directory
 WORKDIR /app
 
-# Copy package files and install production dependencies
+# Install Node production dependencies
 COPY package*.json ./
 RUN npm install --omit=dev --no-audit --no-fund
 
-# Install Python dependencies for Excel & CSV batch processing
-RUN pip3 install --no-cache-dir openpyxl
-
-# Copy application source code
+# Copy source code
 COPY . .
 
 # Ensure storage directories exist with write permissions
 RUN mkdir -p uploads output data
 
-# Configure environment variables
+# Set production defaults (Railway overrides PORT dynamically at runtime)
 ENV NODE_ENV=production
-ENV PORT=5178
 ENV HOST=0.0.0.0
-ENV OTA_CHROME_PATH=/usr/bin/chromium
+ENV PORT=5178
 
-# Expose web server port
+# Default port exposure
 EXPOSE 5178
 
-# Health check
-HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
-  CMD node -e "http.get('http://localhost:5178/api/status', (r) => process.exit(r.statusCode === 200 ? 0 : 1))"
-
-# Start the application server
+# Start application server
 CMD ["node", "server.js"]

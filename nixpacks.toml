@@ -1,0 +1,11 @@
+# ==============================================================================
+# nixpacks.toml — Native Nixpacks build definition for Railway
+# ==============================================================================
+[phases.setup]
+nixPkgs = ["nodejs_20", "python3", "python3Packages.openpyxl", "curl"]
+
+[phases.install]
+cmds = ["npm install --omit=dev --no-audit --no-fund"]
+
+[start]
+cmd = "node server.js"
