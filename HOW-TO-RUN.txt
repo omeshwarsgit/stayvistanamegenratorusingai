@@ -1,0 +1,61 @@
+================================================================================
+           OTA PROPERTY NAME GENERATOR — QUICK START GUIDE
+================================================================================
+
+Welcome! This tool allows you to analyze StayVista and OTA listings, extract 
+verified facts, and generate high-converting, compliant property names for 
+Airbnb, Booking.com, Agoda, MakeMyTrip, and Goibibo.
+
+You DO NOT need technical skills or developer tools installed to run this.
+
+--------------------------------------------------------------------------------
+HOW TO RUN IN 3 EASY STEPS:
+--------------------------------------------------------------------------------
+
+STEP 1: UNZIP THE FOLDER
+   Extract the entire downloaded .ZIP folder to a location on your computer
+   (such as your Desktop or Downloads folder).
+
+STEP 2: DOUBLE-CLICK THE LAUNCHER FILE FOR YOUR COMPUTER
+   
+   ▶ If you are on WINDOWS:
+     Double-click:  START-WINDOWS.bat
+
+   ▶ If you are on MAC:
+     Double-click:  START-MAC.command
+
+STEP 3: START USING THE DASHBOARD
+   The launcher will automatically set up everything and open your web browser 
+   to:
+     http://localhost:5178
+
+   That's it! Paste any listing URL or upload batch files to begin.
+
+
+--------------------------------------------------------------------------------
+HELP & COMMON QUESTIONS
+--------------------------------------------------------------------------------
+
+Q: Do I need administrator rights to install Node.js or Python?
+A: No! The launcher script automatically detects if Node.js is missing and 
+   downloads a standalone portable version directly into a hidden local folder 
+   (.runtime/) inside this project. It does not touch your operating system's 
+   system files.
+
+Q: On Mac, it says "START-MAC.command can't be opened because it is from an 
+   unidentified developer":
+A: Apple's security system protects against downloaded scripts. To open:
+   1. Right-click (or Control-click) on "START-MAC.command".
+   2. Click "Open" from the menu.
+   3. In the warning pop-up, click "Open" again.
+   You only need to do this once.
+
+Q: How do I stop the application when I'm done?
+A: Simply close the terminal/command prompt window that opened, or press 
+   Ctrl + C inside that window.
+
+Q: What happens if I double-click the launcher while it is already running?
+A: The script automatically detects that the server is already active and 
+   will immediately open the dashboard in your browser without crashing.
+
+================================================================================

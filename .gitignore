@@ -1,4 +1,6 @@
 node_modules/
+.runtime/
+.venv/
 .env
 *.log
 .DS_Store
@@ -6,3 +8,4 @@ uploads/
 __pycache__/
 *.pyc
 output/*.zip
+
